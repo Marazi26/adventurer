@@ -191,22 +191,22 @@ header a {
 }
 .about-section .about-title h2 {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: 1.4rem;
+  font-size: 2.222rem;
   line-height: 2.5rem;
   font-weight: 700;
   color: #373a3c;
   text-transform: uppercase;
   text-align: center;
-  padding-bottom: 1rem;
+  padding-bottom: 3rem;
 }
 .about-section .about-title h3 {
   width: 85%;
   margin: 0 auto;
   text-align: center;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-family: "Roboto";
   font-weight: 300;
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
 }
 .about-section .about-info {
   display: flex;
@@ -297,7 +297,8 @@ header a {
   padding: 1rem;
 }
 .about-section .about-cart-info p {
-  margin-bottom: 1rem;
+  padding: 1rem 0;
+  padding-top: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 300;
   font-size: 1.2rem;
@@ -391,6 +392,25 @@ header a {
     padding: 3rem 1.5rem 2rem 1.5rem;
     margin-bottom: 4rem;
   }
+  .about-section .about-title h2 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+    font-weight: 700;
+    color: #373a3c;
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+  .about-section .about-title h3 {
+    width: 85%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1rem;
+    font-family: "Roboto";
+    font-weight: 300;
+    padding-bottom: 1rem;
+  }
   .about-section .about-info {
     display: flex;
     flex-direction: column;
@@ -469,6 +489,75 @@ header a {
     border: 1px solid #afafaf;
     padding: 0.3rem 0.3rem 0.3rem 0.5rem;
   }
+}
+
+/*** SERVICE ******************************************************************************************************/
+.service-section {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 5rem 13rem 2rem 13rem;
+  margin-bottom: 6rem;
+}
+.service-section .service-title h2 {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  font-weight: 700;
+  color: #373a3c;
+  text-transform: uppercase;
+  text-align: center;
+  padding-bottom: 4rem;
+}
+.service-section .service-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.service-section .service-cart {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 0.4rem;
+  padding: 2rem 0.2rem;
+}
+.service-section .service-cart:hover {
+  background-color: #3f444a;
+}
+.service-section .service-cart:hover i {
+  color: #ffffff;
+}
+.service-section .service-cart .icon-div {
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 2.5rem;
+}
+.service-section .service-cart i {
+  font-size: 3rem;
+  color: #333333;
+}
+.service-section .service-cart h3 {
+  padding: 1.5rem 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-align: center;
+}
+.service-section .service-cart p {
+  padding: 1rem 0;
+  padding-top: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 300;
+  font-size: 1.2rem;
+  text-align: center;
+}
+.service-section .service-button-div {
+  text-align: center;
+  padding-top: 1rem;
+}
+.service-section .service-cart a {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  text-align: center;
+  color: #ffffff;
+  background-color: #ec4848;
+  font-size: 1.3rem;
+  padding: 0.4rem 1rem 0.5rem 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */
