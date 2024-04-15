@@ -285,7 +285,7 @@ header {
         right: 1.5rem;
         z-index: 3;
     }
-    
+
     .cart-minus {
         display: none;
     }
@@ -412,7 +412,7 @@ header {
     @media screen and (min-width:320px) and (max-width:768px) {
         @include section-sizing-mobile;
 
-        .about-title{
+        .about-title {
             @include title-with-info-mobile;
         }
 
@@ -468,26 +468,28 @@ header {
             }
         }
 
-        
-    .cart-plus {
-        color: #ffffff;
-        font-size: 1rem;
-        font-weight: bolder;
-        position: absolute;
-        top: 1.2rem;
-        right: 1.5rem;
-        z-index: 3;
-    }
-    .about-cart-name:hover .cart-minus {
-        display: block;
-        color: #ffffff;
-        font-size: 1.5rem;
-        font-weight: bolder;
-        position: absolute;
-        top: .9rem;
-        right: 1.2rem;
-        z-index: 3;
-    }
+
+        .cart-plus {
+            color: #ffffff;
+            font-size: 1rem;
+            font-weight: bolder;
+            position: absolute;
+            top: 1.2rem;
+            right: 1.5rem;
+            z-index: 3;
+        }
+
+        .about-cart-name:hover .cart-minus {
+            display: block;
+            color: #ffffff;
+            font-size: 1.5rem;
+            font-weight: bolder;
+            position: absolute;
+            top: .9rem;
+            right: 1.2rem;
+            z-index: 3;
+        }
+
         .about-cart-info p {
             font-size: 1rem;
         }
@@ -508,57 +510,133 @@ header {
 }
 
 /*** SERVICE ******************************************************************************************************/
-.service-section{
+.service-section {
     @include section-sizing;
 
-    .service-title{
+    .service-title {
         @include title-without-info;
     }
 
-    .service-info{
+    .service-info {
         @include flex-box;
     }
 
-    .service-cart{
+    .service-cart {
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         border-radius: .4rem;
         padding: 2rem .2rem;
+        transition: .3s linear;
     }
 
-    .service-cart:hover{
+    .service-cart:hover {
         background-color: #3f444a;
     }
-    
-    .service-cart:hover i{
+
+    .service-cart:hover i {
         color: #ffffff;
     }
 
-    .service-cart .icon-div{
+    .service-cart:hover h3 {
+        color: #ffffff;
+    }
+
+    .service-cart:hover p {
+        color: #ffffff;
+    }
+
+    .service-cart .icon-div {
         text-align: center;
         padding-top: 1rem;
         padding-bottom: 2.5rem;
     }
 
-    .service-cart i{
+    .service-cart i {
         font-size: 3rem;
         color: #333333;
     }
 
-    .service-cart h3{
+    .service-cart h3 {
         @include little-title-h3;
         text-align: center;
-
     }
-    .service-cart p{
+
+    .service-cart p {
         @include text-p;
         text-align: center;
     }
 
-    .service-button-div{
+    .service-button-div {
         text-align: center;
         padding-top: 1rem;
     }
-    .service-cart a{
+
+    .service-cart a {
         @include red-button;
     }
+
+    @media screen and (min-width:768px) and (max-width:1024px) {
+        @include section-sizing-tablet;
+
+        .service-cart .icon-div {
+            text-align: center;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+
+        .service-cart i {
+            font-size: 2.5rem;
+            color: #333333;
+        }
+
+        .service-cart h3 {
+            font-size: .9rem;
+            text-align: center;
+        }
+    
+        .service-cart p {
+            font-size: 1rem;
+        }
+    
+        .service-cart a {
+            font-size: 1rem;
+            padding: .3rem .8rem .4rem .8rem;
+        }
+    }
+
+    @media screen and (min-width:320px) and (max-width:768px) {
+        @include section-sizing-mobile;
+        
+        .service-info{
+            @include flex-box-mobile;
+        }
+        .service-cart{
+            width: 100%;
+        }
+
+        .service-cart .icon-div {
+            text-align: center;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+
+        .service-cart i {
+            font-size: 2.5rem;
+            color: #333333;
+        }
+
+        .service-cart h3 {
+            font-size: 1rem;
+            text-align: center;
+        }
+    
+        .service-cart p {
+            font-size: 1rem;
+        }
+    
+        .service-cart a {
+            font-size: 1rem;
+            padding: .3rem .8rem .4rem .8rem;
+        }
+    }
 }
+

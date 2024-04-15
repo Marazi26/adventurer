@@ -389,7 +389,7 @@ header a {
 @media screen and (min-width: 320px) and (max-width: 768px) {
   .about-section {
     border: 1px solid rgba(0, 0, 0, 0.1);
-    padding: 3rem 1.5rem 2rem 1.5rem;
+    padding: 3rem 2rem 2rem 2rem;
     margin-bottom: 4rem;
   }
   .about-section .about-title h2 {
@@ -516,11 +516,18 @@ header a {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 0.4rem;
   padding: 2rem 0.2rem;
+  transition: 0.3s linear;
 }
 .service-section .service-cart:hover {
   background-color: #3f444a;
 }
 .service-section .service-cart:hover i {
+  color: #ffffff;
+}
+.service-section .service-cart:hover h3 {
+  color: #ffffff;
+}
+.service-section .service-cart:hover p {
   color: #ffffff;
 }
 .service-section .service-cart .icon-div {
@@ -558,6 +565,68 @@ header a {
   background-color: #ec4848;
   font-size: 1.3rem;
   padding: 0.4rem 1rem 0.5rem 1rem;
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .service-section {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 5rem 6rem 2rem 6rem;
+    margin-bottom: 4rem;
+  }
+  .service-section .service-cart .icon-div {
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .service-section .service-cart i {
+    font-size: 2.5rem;
+    color: #333333;
+  }
+  .service-section .service-cart h3 {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  .service-section .service-cart p {
+    font-size: 1rem;
+  }
+  .service-section .service-cart a {
+    font-size: 1rem;
+    padding: 0.3rem 0.8rem 0.4rem 0.8rem;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .service-section {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 3rem 2rem 2rem 2rem;
+    margin-bottom: 4rem;
+  }
+  .service-section .service-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .service-section .service-cart {
+    width: 100%;
+  }
+  .service-section .service-cart .icon-div {
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .service-section .service-cart i {
+    font-size: 2.5rem;
+    color: #333333;
+  }
+  .service-section .service-cart h3 {
+    font-size: 1rem;
+    text-align: center;
+  }
+  .service-section .service-cart p {
+    font-size: 1rem;
+  }
+  .service-section .service-cart a {
+    font-size: 1rem;
+    padding: 0.3rem 0.8rem 0.4rem 0.8rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
