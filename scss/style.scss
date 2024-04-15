@@ -589,20 +589,54 @@ header {
         }
 
         .service-cart h3 {
-            @include little-title-h3;
             font-size: .9rem;
             text-align: center;
         }
     
         .service-cart p {
-            @include text-p;
             font-size: 1rem;
         }
     
         .service-cart a {
-            @include red-button;
+            font-size: 1rem;
+            padding: .3rem .8rem .4rem .8rem;
+        }
+    }
+
+    @media screen and (min-width:320px) and (max-width:768px) {
+        @include section-sizing-mobile;
+        
+        .service-info{
+            @include flex-box-mobile;
+        }
+        .service-cart{
+            width: 100%;
+        }
+
+        .service-cart .icon-div {
+            text-align: center;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+
+        .service-cart i {
+            font-size: 2.5rem;
+            color: #333333;
+        }
+
+        .service-cart h3 {
+            font-size: 1rem;
+            text-align: center;
+        }
+    
+        .service-cart p {
+            font-size: 1rem;
+        }
+    
+        .service-cart a {
             font-size: 1rem;
             padding: .3rem .8rem .4rem .8rem;
         }
     }
 }
+
