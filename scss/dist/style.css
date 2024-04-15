@@ -397,7 +397,7 @@ header a {
     gap: 2rem;
   }
   .about-section .left-about-info,
-  .about-section .right-about-info {
+.about-section .right-about-info {
     width: 100%;
   }
   .about-section .about-cart h2 {
@@ -470,5 +470,3 @@ header a {
     padding: 0.3rem 0.3rem 0.3rem 0.5rem;
   }
 }
-
-/*# sourceMappingURL=style.css.map */
