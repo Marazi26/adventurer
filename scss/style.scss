@@ -1,3 +1,7 @@
+/*** MIXIN ****************************/
+@import "./mixin";
+
+
 * {
     margin: 0;
     padding: 0;
@@ -19,23 +23,19 @@ a {
     margin: 0 auto;
 }
 
-/*** MIXIN ****************************/
-@import "./mixin";
-
-
 /*** NAV ****************************************************************************/
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem 16rem 1.2rem
-     16rem;
+    padding: 2rem 13rem 1.2rem 13rem;
     background-color: #ffffff;
     position: fixed;
     left: 0;
     right: 0;
     z-index: 3;
+
     ul {
         display: flex;
         justify-content: space-between;
@@ -77,7 +77,7 @@ nav {
 
     /*** NAV MEDIA TABLET ******************************************************************************************************/
     @media screen and (min-width:768px) and (max-width:1024px) {
-        padding: 1rem 3rem 1.2rem 3rem;
+        padding: 1rem 6rem 1.2rem 6rem;
 
         .left-nav img {
             width: 60%;
@@ -99,7 +99,7 @@ nav {
     /*** NAV MEDIA MOBILE ******************************************************************************************************/
     @media screen and (min-width:320px) and (max-width:768px) {
 
-        padding: .7rem 1rem 1.2rem 1rem;
+        padding: .7rem 1.5rem 1.2rem 1.5rem;
 
         .left-nav img {
             width: 50%;
@@ -154,33 +154,34 @@ header {
     }
 
     a {
-        @include red-button    
+        @include red-button
     }
 
-/*** HEADER TABLET*****************************************************************/
+    /*** HEADER TABLET*****************************************************************/
     @media screen and (min-width:768px) and (max-width:1024px) {
 
         padding: 15rem 0 8rem 0;
-        
+
         h1 {
             font-size: 4rem;
             letter-spacing: .3rem;
         }
+
         p {
             font-size: 1.1rem;
             word-spacing: .1rem;
         }
-    
+
         a {
             font-size: 1.1rem;
             padding: .3rem 1rem .4rem 1rem;
         }
     }
 
-/*** HEADER MOBILE *****************************************************************/
+    /*** HEADER MOBILE *****************************************************************/
     @media screen and (min-width:320px) and (max-width:768px) {
 
-            padding: 12rem 1rem 6rem 1rem;
+        padding: 12rem 1rem 6rem 1rem;
 
         h1 {
             font-size: 2.2rem;
@@ -191,7 +192,7 @@ header {
             font-size: .8rem;
             word-spacing: 0;
         }
-        
+
         .see-more {
             padding-top: 3rem;
         }
@@ -199,6 +200,308 @@ header {
         a {
             font-size: 1rem;
             padding: .2rem 1rem .3rem 1rem;
+        }
+    }
+}
+
+/*** ABOUT ******************************************************************************************************/
+.about-section {
+    @include section-sizing;
+
+    .about-title {
+        @include title-with-info;
+        padding-bottom: 3rem;
+    }
+
+    .about-info {
+        @include flex-box;
+    }
+
+    .left-about-info,
+    .right-about-info {
+        width: 49.3333%;
+        overflow: hidden;
+    }
+
+    .about-cart {
+        border: 1px solid rgba(0, 0, 0, .1);
+        margin-bottom: 1rem;
+    }
+
+    .about-cart-name {
+        cursor: pointer;
+        background-color: #333333;
+        padding: 1rem 1rem .3rem 1rem;
+        padding-right: 0;
+        transition: .3s linear;
+        position: relative;
+        @include flex-box;
+        align-items: baseline;
+    }
+
+    .about-cart-name:hover {
+        background-color: #ec4848;
+    }
+
+    .about-cart h2 {
+        margin-bottom: 1rem;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: 300;
+        font-size: 1.2rem;
+        color: #ffffff;
+        position: relative;
+
+        &::after {
+            content: "";
+            width: 1.8rem;
+            height: 1.8rem;
+            background-color: #afafaf;
+            border-radius: 50%;
+            font-size: 2rem;
+            position: absolute;
+            right: -18.3rem;
+            border: 4px solid #626262;
+        }
+
+        &::before {
+            content: "";
+            width: 3rem;
+            height: .5rem;
+            background-color: #afafaf;
+            font-size: 2rem;
+            position: absolute;
+            right: -20rem;
+            top: .9rem;
+            z-index: 2;
+        }
+    }
+
+    .cart-plus {
+        color: #ffffff;
+        font-size: 1rem;
+        font-weight: bolder;
+        position: absolute;
+        top: 1.7rem;
+        right: 1.5rem;
+        z-index: 3;
+    }
+    
+    .cart-minus {
+        display: none;
+    }
+
+    .about-cart-name:hover .cart-plus {
+        display: none;
+    }
+
+    .about-cart-name:hover .cart-minus {
+        display: block;
+        color: #ffffff;
+        font-size: 1.5rem;
+        font-weight: bolder;
+        position: absolute;
+        top: 1.35rem;
+        right: 1.1rem;
+        z-index: 3;
+    }
+
+    .about-cart-info {
+        display: none;
+        padding: 1rem;
+    }
+
+    .about-cart-info p {
+        margin-bottom: 1rem;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: 300;
+        font-size: 1.2rem;
+    }
+
+    /*** RIGHT ABOUT **********************************************************/
+    .about-percentage {
+        background-color: #afafaf;
+
+        .overlay1 {
+            width: 95%;
+            background-color: #ec4848;
+        }
+
+        .overlay2 {
+            width: 90%;
+            background-color: #ec4848;
+        }
+
+        .overlay3 {
+            width: 85%;
+            background-color: #ec4848;
+        }
+
+        .overlay4 {
+            width: 80%;
+            background-color: #ec4848;
+        }
+
+        .overlay5 {
+            width: 70%;
+            background-color: #ec4848;
+        }
+    }
+
+    .about-percentage h2 {
+        margin-bottom: 1rem;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: 300;
+        font-size: 1rem;
+        color: #ffffff;
+        position: relative;
+        margin-bottom: 3rem;
+        margin-top: 0;
+        border: 1px solid #afafaf;
+        padding: .3rem .3rem .3rem .5rem;
+    }
+
+    /*** TABLET ABOUT **********************************************************/
+    @media screen and (min-width:768px) and (max-width:1024px) {
+        @include section-sizing-tablet;
+
+        .about-cart h2 {
+            margin-bottom: 1rem;
+            font-size: 1rem;
+
+            &::after {
+                content: "";
+                width: 1.8rem;
+                height: 1.8rem;
+                background-color: #afafaf;
+                border-radius: 50%;
+                font-size: 2rem;
+                position: absolute;
+                right: -18.3rem;
+                border: 4px solid #626262;
+            }
+
+            &::before {
+                content: "";
+                width: 3rem;
+                height: .5rem;
+                background-color: #afafaf;
+                font-size: 2rem;
+                position: absolute;
+                right: -20rem;
+                top: .9rem;
+                z-index: 2;
+            }
+        }
+
+        .about-cart-info p {
+            font-size: 1rem;
+        }
+
+        .about-percentage h2 {
+            margin-bottom: 1rem;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: 300;
+            font-size: .9rem;
+            color: #ffffff;
+            position: relative;
+            margin-bottom: 3rem;
+            margin-top: 0;
+            border: 1px solid #afafaf;
+            padding: .3rem .3rem .3rem .5rem;
+        }
+    }
+
+    /*** MOBILE ABOUT **********************************************************/
+    @media screen and (min-width:320px) and (max-width:768px) {
+        @include section-sizing-mobile;
+
+        .about-info {
+            @include flex-box-mobile;
+        }
+
+        .left-about-info,
+        .right-about-info {
+            width: 100%;
+        }
+
+        .about-cart h2 {
+            margin-bottom: 1rem;
+            font-size: 1rem;
+
+            &::before {
+                content: '';
+                display: none;
+            }
+
+            &::after {
+                content: '';
+                display: none;
+            }
+        }
+
+        .about-cart-name {
+
+            &::after {
+                content: "";
+                width: 1.5rem;
+                height: 1.5rem;
+                background-color: #afafaf;
+                border-radius: 50%;
+                font-size: 2rem;
+                position: absolute;
+                top: .7rem;
+                right: 1rem;
+                border: 4px solid #626262;
+            }
+
+            &::before {
+                content: "";
+                width: 2rem;
+                height: .5rem;
+                background-color: #afafaf;
+                font-size: 2rem;
+                position: absolute;
+                right: 0;
+                top: 1.45rem;
+                z-index: 2;
+            }
+        }
+
+        
+    .cart-plus {
+        color: #ffffff;
+        font-size: 1rem;
+        font-weight: bolder;
+        position: absolute;
+        top: 1.2rem;
+        right: 1.5rem;
+        z-index: 3;
+    }
+    .about-cart-name:hover .cart-minus {
+        display: block;
+        color: #ffffff;
+        font-size: 1.5rem;
+        font-weight: bolder;
+        position: absolute;
+        top: .9rem;
+        right: 1.2rem;
+        z-index: 3;
+    }
+        .about-cart-info p {
+            font-size: 1rem;
+        }
+
+        .about-percentage h2 {
+            margin-bottom: 1rem;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: 300;
+            font-size: .9rem;
+            color: #ffffff;
+            position: relative;
+            margin-bottom: 3rem;
+            margin-top: 0;
+            border: 1px solid #afafaf;
+            padding: .3rem .3rem .3rem .5rem;
         }
     }
 }
