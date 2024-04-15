@@ -311,10 +311,7 @@ header {
     }
 
     .about-cart-info p {
-        margin-bottom: 1rem;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        font-weight: 300;
-        font-size: 1.2rem;
+        @include text-p;
     }
 
     /*** RIGHT ABOUT **********************************************************/
@@ -415,6 +412,10 @@ header {
     @media screen and (min-width:320px) and (max-width:768px) {
         @include section-sizing-mobile;
 
+        .about-title{
+            @include title-with-info-mobile;
+        }
+
         .about-info {
             @include flex-box-mobile;
         }
@@ -503,5 +504,61 @@ header {
             border: 1px solid #afafaf;
             padding: .3rem .3rem .3rem .5rem;
         }
+    }
+}
+
+/*** SERVICE ******************************************************************************************************/
+.service-section{
+    @include section-sizing;
+
+    .service-title{
+        @include title-without-info;
+    }
+
+    .service-info{
+        @include flex-box;
+    }
+
+    .service-cart{
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-radius: .4rem;
+        padding: 2rem .2rem;
+    }
+
+    .service-cart:hover{
+        background-color: #3f444a;
+    }
+    
+    .service-cart:hover i{
+        color: #ffffff;
+    }
+
+    .service-cart .icon-div{
+        text-align: center;
+        padding-top: 1rem;
+        padding-bottom: 2.5rem;
+    }
+
+    .service-cart i{
+        font-size: 3rem;
+        color: #333333;
+    }
+
+    .service-cart h3{
+        @include little-title-h3;
+        text-align: center;
+
+    }
+    .service-cart p{
+        @include text-p;
+        text-align: center;
+    }
+
+    .service-button-div{
+        text-align: center;
+        padding-top: 1rem;
+    }
+    .service-cart a{
+        @include red-button;
     }
 }
