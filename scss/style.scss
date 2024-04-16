@@ -592,11 +592,11 @@ header {
             font-size: .9rem;
             text-align: center;
         }
-    
+
         .service-cart p {
             font-size: 1rem;
         }
-    
+
         .service-cart a {
             font-size: 1rem;
             padding: .3rem .8rem .4rem .8rem;
@@ -605,11 +605,16 @@ header {
 
     @media screen and (min-width:320px) and (max-width:768px) {
         @include section-sizing-mobile;
-        
-        .service-info{
+
+        .service-title {
+            @include title-with-info-mobile
+        }
+
+        .service-info {
             @include flex-box-mobile;
         }
-        .service-cart{
+
+        .service-cart {
             width: 100%;
         }
 
@@ -628,15 +633,121 @@ header {
             font-size: 1rem;
             text-align: center;
         }
-    
+
         .service-cart p {
             font-size: 1rem;
         }
-    
+
         .service-cart a {
-            font-size: 1rem;
-            padding: .3rem .8rem .4rem .8rem;
+            @include red-button-mini;
         }
     }
 }
 
+/*** JOIN ******************************************************************************************************/
+
+.join-section {
+    padding: 7rem;
+    padding-top: 6rem;
+
+    background-image: url('../assets/joinus/joinbg.jpg');
+    @include title-with-info;
+
+    h2 {
+        padding-top: 1rem;
+        font-size: 2.48rem;
+        color: #ffffff;
+    }
+
+    h3 {
+        color: #ffffff;
+        padding: 0 7rem;
+        padding-bottom: 2.5rem;
+    }
+
+    .icon-div {
+        text-align: center;
+    }
+
+    .icon-div i {
+        font-size: 4.5rem;
+        color: #ec4848;
+    }
+
+    .see-more {
+        text-align: center
+    }
+
+    a {
+        @include red-button;
+    }
+
+    @media screen and (min-width:768px) and (max-width:1024px) {
+        @include section-sizing-tablet;
+
+        h2 {
+            padding-top: 1rem;
+            font-size: 2rem;
+            color: #ffffff;
+        }
+
+        h3 {
+            color: #ffffff;
+            padding: 0 7rem;
+            padding-bottom: 2rem;
+            font-size: 1.2rem;
+        }
+
+        .icon-div {
+            text-align: center;
+        }
+
+        .icon-div i {
+            font-size: 4.5rem;
+            color: #ec4848;
+        }
+
+        .see-more {
+            text-align: center
+        }
+
+        a {
+            @include red-button;
+        }
+    }
+
+    @media screen and (min-width:320px) and (max-width:768px) {
+        @include section-sizing-mobile;
+
+        @include title-with-info-mobile;
+
+        h2 {
+            padding-top: 1rem;
+            color: #ffffff;
+        }
+
+        h3{
+            color: #ffffff;
+            padding: 0 7rem;
+            padding-bottom: 2rem;
+            font-size: 1rem;
+        }
+
+        .icon-div {
+            text-align: center;
+        }
+
+        .icon-div i {
+            font-size: 3.5rem;
+            color: #ec4848;
+        }
+
+        .see-more {
+            text-align: center
+        }
+
+        a {
+            @include red-button-mini;
+        }
+    }
+}
