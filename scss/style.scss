@@ -18,9 +18,10 @@ a {
     text-decoration: none;
 }
 
-img{
+img {
     width: 100%;
 }
+
 .container {
     max-width: 1340px;
     margin: 0 auto;
@@ -878,13 +879,14 @@ header {
         margin: 0 auto;
     }
 
-    .review-cart-img{
+    .review-cart-img {
         width: 17%
     }
 
-    .review-cart-info{
+    .review-cart-info {
         width: 83%
     }
+
     .review-cart {
         @include flex-box;
         align-items: center;
@@ -900,13 +902,14 @@ header {
         color: #3f444a
     }
 
-    .review-cart-info h3{
+    .review-cart-info h3 {
         @include little-title-h3;
         font-size: .9rem;
         padding-top: 0;
         color: #ec4848;
         text-transform: uppercase;
     }
+
     .review-cart-info p {
         @include little-title-h3;
         font-weight: 300;
@@ -917,69 +920,360 @@ header {
     @media screen and (min-width:768px) and (max-width:1024px) {
         @include section-sizing-tablet;
 
-    .review-title {
-        @include title-without-info
-    }
+        .review-title {
+            @include title-without-info
+        }
 
-    .review-info {
-        margin: 0 auto;
-    }
+        .review-info {
+            margin: 0 auto;
+        }
 
-    .review-cart-img{
-        width: 20%
-    }
+        .review-cart-img {
+            width: 20%
+        }
 
-    .review-cart-info{
-        width: 79%
-    }
+        .review-cart-info {
+            width: 79%
+        }
 
-    .review-cart-info h2 {
-        font-size: 1.1rem;
-    }
+        .review-cart-info h2 {
+            font-size: 1.1rem;
+        }
 
-    .review-cart-info h3{
-        font-size: .8rem;
-    }
-    .review-cart-info p {
-        font-size: .9rem;
-        width: 75%;
-    }
+        .review-cart-info h3 {
+            font-size: .8rem;
+        }
+
+        .review-cart-info p {
+            font-size: .9rem;
+            width: 75%;
+        }
     }
 
     @media screen and (min-width:320px) and (max-width:768px) {
         @include section-sizing-mobile;
 
-    .review-title {
-        @include title-with-info-mobile
+        .review-title {
+            @include title-with-info-mobile
+        }
+
+        .review-info {
+            margin: 0 auto;
+        }
+
+        .review-cart {
+            margin-top: 1.5rem;
+        }
+
+        .review-cart-img {
+            min-width: 25%;
+            max-width: 30%;
+        }
+
+        .review-cart-info {
+            min-width: 69%;
+            max-width: 64%;
+        }
+
+        .review-cart-info h2 {
+            font-size: 1rem;
+            width: 70%;
+        }
+
+        .review-cart-info h3 {
+            font-size: .7rem;
+            width: 70%;
+        }
+
+        .review-cart-info p {
+            font-size: .8rem;
+            width: 75%;
+        }
+    }
+}
+
+/*** Daily-Statistics ******************************************************************************************************/
+
+.daily-statistics-section {
+    background-image: url(../assets/daily-statistics/counterbg.jpg);
+
+    .overlay {
+        @include flex-box;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 5rem 13rem 2rem 13rem;
     }
 
-    .review-info {
-        margin: 0 auto;
+    .daily-statistics-cart {
+        background-color: rgba(236, 72, 72, 0.5);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1.5rem 1rem;
+        width: 15rem;
+        height: 13rem;
     }
 
-    .review-cart {
-        margin-top:1.5rem;
-    }
-    .review-cart-img{
-        min-width: 25%;
-        max-width: 30%;
+    .daily-statistics-cart i {
+        color: #ffffff;
+        font-size: 2.5rem;
     }
 
-    .review-cart-info{
-        min-width: 75%;
-        max-width: 70%;
+    .daily-statistics-cart h3 {
+        @include little-title-h3;
+        font-size: 2.5rem;
+        color: #ffffff;
     }
 
-    .review-cart-info h2 {
-        font-size: 1rem;
+    .daily-statistics-cart p {
+        @include text-p;
+        font-size: 1.2rem;
+        color: #ffffff;
     }
 
-    .review-cart-info h3{
-        font-size: .7rem;
+    @media screen and (min-width:768px) and (max-width:1024px) {
+        .overlay {
+            padding: 5rem 6rem 2rem 6rem;
+        }
+
+        .daily-statistics-cart {
+            padding: 1.5rem .7rem;
+            width: 17rem;
+            height: 10rem;
+        }
+
+        .daily-statistics-cart i {
+            color: #ffffff;
+            font-size: 2rem;
+        }
+
+        .daily-statistics-cart h3 {
+            @include little-title-h3;
+            padding-top: .5rem;
+            padding-bottom: 0;
+            font-size: 2rem;
+            color: #ffffff;
+        }
+
+        .daily-statistics-cart p {
+            @include text-p;
+            padding: 0;
+            font-size: .9rem;
+            color: #ffffff;
+        }
     }
-    .review-cart-info p {
-        font-size: .8rem;
-        width: 75%;
+
+    @media screen and (min-width:320px) and (max-width:768px) {
+
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        .overlay {
+            @include flex-box-mobile;
+            gap: 1rem;
+            padding: 3rem 3rem 2rem 3rem;
+        }
+
+        .daily-statistics-cart {
+            padding: 1rem .7rem 2rem .7rem;
+            height: inherit;
+            width: 100%;
+        }
+
+        .daily-statistics-cart i {
+            color: #ffffff;
+            font-size: 1.5rem;
+        }
+
+        .daily-statistics-cart h3 {
+            @include little-title-h3;
+            padding-top: .5rem;
+            padding-bottom: 0;
+            font-size: 1.8rem;
+            color: #ffffff;
+        }
+
+        .daily-statistics-cart p {
+            @include text-p;
+            padding: 0;
+            font-size: 1.2rem;
+            color: #ffffff;
+        }
     }
+}
+
+/*** OUR TEAM ******************************************************************************************************/
+
+.our-team-section {
+    @include section-sizing;
+
+    .our-team-title {
+        @include title-with-info
+    }
+
+    .our-team-info {
+        @include flex-box;
+    }
+
+    .cart1 {
+        background-image: url(../assets/team/team1.jpg);
+    }
+
+    .cart2 {
+        background-image: url(../assets/team/team2.jpg);
+    }
+
+    .cart3 {
+        background-image: url(../assets/team/team3.jpg);
+    }
+
+    .cart4 {
+        background-image: url(../assets/team/team4.jpg);
+    }
+
+    .our-team-cart {
+        background-repeat: no-repeat;
+
+        width: 17rem;
+        height: 18.8rem;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .our-team-overlay {
+        background-color: rgba(236, 72, 72, 0.5);
+        width: 100%;
+        height: 6rem;
+        position: absolute;
+        bottom: 0;
+        transform: translatey(100%);
+        transition: .2s linear;
+
+        h2 {
+            @include little-title-h3;
+            padding: 0;
+            padding-top: .5rem;
+            padding-bottom: .1rem;
+            color: #ffffff;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        h3 {
+            @include text-p;
+            padding: 0;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        ul {
+            @include flex-box;
+            padding: 0 4rem;
+            padding-top: .3rem;
+            gap: .1rem;
+
+            li a {
+                font-size: 1rem;
+                color: #ffffff;
+            }
+        }
+    }
+
+    .our-team-cart:hover .our-team-overlay {
+        transform: translateY(0);
+    }
+
+    @media screen and (min-width:768px) and (max-width:1024px) {
+        @include section-sizing-tablet;
+
+        .our-team-title {
+            h3 {
+                font-size: 1rem;
+            }
+        }
+
+        .our-team-cart {
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            min-width: 8.5rem;
+            max-width: 11rem;
+            min-height: 10rem;
+            max-height: 13rem;
+        }
+
+        .our-team-overlay {
+            height: 5rem;
+
+            h2 {
+                padding-top: .5rem;
+                padding-bottom: .1rem;
+                font-size: .9rem;
+            }
+
+            h3 {
+                padding: 0;
+                font-size: .9rem;
+            }
+
+            ul {
+                padding: 0 2rem;
+                padding-top: .3rem;
+                gap: .1rem;
+
+                li a {
+                    font-size: .7rem;
+                }
+            }
+        }
+
+    }
+
+    @media screen and (min-width:320px) and (max-width:768px) {
+        @include section-sizing-mobile;
+        padding: 3rem 3rem 2rem 3rem;
+
+        .our-team-title {
+            @include title-with-info-mobile
+        }
+
+        .our-team-info {
+            @include flex-box-mobile;
+        }
+
+        .our-team-cart {
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            max-height: 20rem;
+            min-height: 40rem;
+        }
+
+        .our-team-overlay {
+            height: 7rem;
+
+            h2 {
+                padding-top: .5rem;
+                padding-bottom: .3rem;
+                font-size: 1.2rem;
+            }
+
+            h3 {
+                padding: 0;
+                font-size: 1.1rem;
+            }
+
+            ul {
+                padding: .7rem 5.5rem;
+                gap: 0;
+
+                li a {
+                    font-size: .9rem;
+                }
+            }
+        }
+
     }
 }
