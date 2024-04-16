@@ -18,6 +18,9 @@ a {
     text-decoration: none;
 }
 
+img{
+    width: 100%;
+}
 .container {
     max-width: 1340px;
     margin: 0 auto;
@@ -649,7 +652,7 @@ header {
 .join-section {
     padding: 7rem;
     padding-top: 6rem;
-
+    margin-bottom: 4rem;
     background-image: url('../assets/joinus/joinbg.jpg');
     @include title-with-info;
 
@@ -728,7 +731,7 @@ header {
 
         h3 {
             color: #ffffff;
-            padding: 0 7rem;
+            padding: 0 1rem;
             padding-bottom: 2rem;
             font-size: 1rem;
         }
@@ -806,7 +809,7 @@ header {
     }
 
     @media screen and (min-width:768px) and (max-width:1024px) {
-        @include section-sizing-tablet;   
+        @include section-sizing-tablet;
 
         .offer-cart-icon i {
             font-size: 1.5rem;
@@ -822,38 +825,161 @@ header {
     }
 
     @media screen and (min-width:320px) and (max-width:768px) {
-        @include section-sizing-mobile;   
+        @include section-sizing-mobile;
 
-        .offer-title{
+        .offer-title {
             @include title-with-info-mobile;
         }
 
-        .offer-info{
+        .offer-info {
             @include flex-box-mobile;
         }
 
-        .offer-cart{
+        .offer-cart {
             width: 100%;
         }
 
-        .offer-cart-icon{
-            width: 25%;
+        .offer-cart-icon {
+            min-width: 25%;
+            max-width: 30%;
         }
-        .offer-cart-info{
-            width: 75%;
+
+        .offer-cart-info {
+            min-width: 75%;
+            max-width: 70%;
         }
+
         .offer-cart-icon i {
             font-size: 1.5rem;
         }
 
         .offer-cart-info h2 {
-            font-size: 1.4rem;
+            font-size: 1rem;
             padding-bottom: 1rem;
         }
 
         .offer-cart-info h3 {
-            font-size: 1.2rem;
+            font-size: .9rem;
             padding-bottom: 1rem;
         }
+    }
+}
+
+/*** REVIEW ******************************************************************************************************/
+
+.review-section {
+    @include section-sizing;
+
+    .review-title {
+        @include title-without-info
+    }
+
+    .review-info {
+        margin: 0 auto;
+    }
+
+    .review-cart-img{
+        width: 17%
+    }
+
+    .review-cart-info{
+        width: 83%
+    }
+    .review-cart {
+        @include flex-box;
+        align-items: center;
+        gap: 3rem;
+        margin-top: 3rem;
+    }
+
+    .review-cart-info h2 {
+        @include little-title-h3;
+        text-transform: uppercase;
+        padding-bottom: 0;
+        font-size: 1.5rem;
+        color: #3f444a
+    }
+
+    .review-cart-info h3{
+        @include little-title-h3;
+        font-size: .9rem;
+        padding-top: 0;
+        color: #ec4848;
+        text-transform: uppercase;
+    }
+    .review-cart-info p {
+        @include little-title-h3;
+        font-weight: 300;
+        width: 75%;
+        padding-top: 0;
+    }
+
+    @media screen and (min-width:768px) and (max-width:1024px) {
+        @include section-sizing-tablet;
+
+    .review-title {
+        @include title-without-info
+    }
+
+    .review-info {
+        margin: 0 auto;
+    }
+
+    .review-cart-img{
+        width: 20%
+    }
+
+    .review-cart-info{
+        width: 79%
+    }
+
+    .review-cart-info h2 {
+        font-size: 1.1rem;
+    }
+
+    .review-cart-info h3{
+        font-size: .8rem;
+    }
+    .review-cart-info p {
+        font-size: .9rem;
+        width: 75%;
+    }
+    }
+
+    @media screen and (min-width:320px) and (max-width:768px) {
+        @include section-sizing-mobile;
+
+    .review-title {
+        @include title-with-info-mobile
+    }
+
+    .review-info {
+        margin: 0 auto;
+    }
+
+    .review-cart {
+        margin-top:1.5rem;
+    }
+    .review-cart-img{
+        min-width: 25%;
+        max-width: 30%;
+    }
+
+    .review-cart-info{
+        min-width: 75%;
+        max-width: 70%;
+    }
+
+    .review-cart-info h2 {
+        font-size: 1rem;
+    }
+
+    .review-cart-info h3{
+        font-size: .7rem;
+    }
+    .review-cart-info p {
+        font-size: .8rem;
+        width: 75%;
+    }
     }
 }
