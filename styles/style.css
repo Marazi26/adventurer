@@ -1,4 +1,6 @@
-/*** MIXIN ****************************/
+@charset "UTF-8";
+/*** IMPORTS ****************************/
+/*** RESET ***********************************/
 * {
   margin: 0;
   padding: 0;
@@ -27,86 +29,102 @@ img {
 /*** NAV ****************************************************************************/
 nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 2rem 13rem 1.2rem 13rem;
+  padding-top: 1.9%;
+  padding-bottom: 1.3%;
   background-color: #ffffff;
   position: fixed;
   left: 0;
   right: 0;
-  z-index: 3;
+  z-index: 5;
   /*** NAV MEDIA TABLET ******************************************************************************************************/
   /*** NAV MEDIA MOBILE ******************************************************************************************************/
 }
-nav .right-nav ul {
+nav .nav-info {
+  width: 73%;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+nav .nav-info .right-nav ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
 }
-nav .right-nav ul li a {
+nav .nav-info .right-nav ul li a {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   text-transform: uppercase;
   font-size: 1.2rem;
   font-weight: 400;
   color: #74777b;
 }
-nav .right-nav ul li a:hover {
+nav .nav-info .right-nav ul li a:hover {
   color: #ec4848;
 }
-nav .right-nav ul li a:focus {
+nav .nav-info .right-nav ul li a:focus {
   color: #ec4848;
 }
-nav .right-nav ul li a:active {
+nav .nav-info .right-nav ul li a:active {
   color: #ec4848;
 }
-nav .right-nav .home-li {
+nav .nav-info .right-nav .home-li {
   color: #ec4848;
 }
-nav .search-icon {
+nav .nav-info .search-icon {
   font-weight: bolder;
 }
-nav .burger-nav {
+nav .nav-info .burger-nav {
   display: none;
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  nav {
-    padding: 1rem 6rem 1.2rem 6rem;
+  nav .nav-info {
+    width: 87%;
   }
-  nav .left-nav img {
+  nav .nav-info .left-nav img {
     width: 60%;
   }
-  nav .right-nav {
+  nav .nav-info .right-nav {
     display: none;
   }
-  nav .burger-nav {
+  nav .nav-info .burger-nav {
     display: block;
   }
-  nav .burger-nav i {
+  nav .nav-info .burger-nav i {
     font-size: 1rem;
   }
 }
 @media screen and (min-width: 320px) and (max-width: 768px) {
-  nav {
-    padding: 0.7rem 1.5rem 1.2rem 1.5rem;
+  nav .nav-info {
+    width: 92%;
   }
-  nav .left-nav img {
+  nav .nav-info .left-nav img {
     width: 50%;
   }
-  nav .right-nav {
+  nav .nav-info .right-nav {
     display: none;
   }
-  nav .burger-nav {
+  nav .nav-info .burger-nav {
     display: block;
   }
-  nav .burger-nav i {
+  nav .nav-info .burger-nav i {
     font-size: 0.7rem;
   }
 }
 
 /***HEADER******************************************************************************************************/
 header {
-  padding: 17rem 0 8rem 0;
+  height: 100vh;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 6rem;
   background-image: url("../assets/header/homebenner.jpg");
   background-position: top center;
   background-size: cover;
@@ -145,7 +163,7 @@ header a {
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   header {
-    padding: 15rem 0 8rem 0;
+    padding-top: 3rem;
   }
   header h1 {
     font-size: 4rem;
@@ -183,15 +201,18 @@ header a {
 
 /*** ABOUT ******************************************************************************************************/
 .about-section {
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 5rem 13rem 2rem 13rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 6rem;
   /*** RIGHT ABOUT **********************************************************/
   /*** TABLET ABOUT **********************************************************/
   /*** MOBILE ABOUT **********************************************************/
-}
-.about-section .about-title {
-  padding-bottom: 3rem;
 }
 .about-section .about-title h2 {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -202,9 +223,10 @@ header a {
   text-transform: uppercase;
   text-align: center;
   padding-bottom: 3rem;
+  padding-top: 2rem;
 }
 .about-section .about-title h3 {
-  width: 85%;
+  width: 75%;
   margin: 0 auto;
   text-align: center;
   font-size: 1.2rem;
@@ -213,6 +235,7 @@ header a {
   padding-bottom: 2rem;
 }
 .about-section .about-info {
+  width: 73%;
   display: flex;
   justify-content: space-between;
   gap: 2rem;
@@ -238,8 +261,70 @@ header a {
   gap: 2rem;
   align-items: baseline;
 }
+.about-section .about-cart-name::before {
+  content: "+";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.8rem;
+  height: 1.8rem;
+  background-color: #afafaf;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  font-weight: 900;
+  font-family: Arial, sans-serif;
+  color: #ffffff;
+  position: absolute;
+  right: 1.2rem;
+  border: 4px solid #626262;
+}
+.about-section .about-cart-name::after {
+  content: "";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.5rem;
+  height: 0.5rem;
+  background-color: #afafaf;
+  font-size: 2rem;
+  position: absolute;
+  right: 0;
+  top: 1.9rem;
+  z-index: 2;
+}
 .about-section .about-cart-name:hover {
   background-color: #ec4848;
+}
+.about-section .about-cart-name:hover::before {
+  content: "−";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.8rem;
+  height: 1.8rem;
+  background-color: #ec4848;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  font-weight: 900;
+  font-family: Arial, sans-serif;
+  position: absolute;
+  right: 1.2rem;
+  color: #ffffff;
+  border: 4px solid #ffffff;
+}
+.about-section .about-cart-name:hover::after {
+  content: "";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.4rem;
+  height: 0.5rem;
+  background-color: #ffffff;
+  font-size: 2rem;
+  position: absolute;
+  right: 0;
+  top: 1.9rem;
+  z-index: 0;
 }
 .about-section .about-cart h2 {
   margin-bottom: 1rem;
@@ -248,53 +333,6 @@ header a {
   font-size: 1.2rem;
   color: #ffffff;
   position: relative;
-}
-.about-section .about-cart h2::after {
-  content: "";
-  width: 1.8rem;
-  height: 1.8rem;
-  background-color: #afafaf;
-  border-radius: 50%;
-  font-size: 2rem;
-  position: absolute;
-  right: -18.3rem;
-  border: 4px solid #626262;
-}
-.about-section .about-cart h2::before {
-  content: "";
-  width: 3rem;
-  height: 0.5rem;
-  background-color: #afafaf;
-  font-size: 2rem;
-  position: absolute;
-  right: -20rem;
-  top: 0.9rem;
-  z-index: 2;
-}
-.about-section .cart-plus {
-  color: #ffffff;
-  font-size: 1rem;
-  font-weight: bolder;
-  position: absolute;
-  top: 1.7rem;
-  right: 1.5rem;
-  z-index: 3;
-}
-.about-section .cart-minus {
-  display: none;
-}
-.about-section .about-cart-name:hover .cart-plus {
-  display: none;
-}
-.about-section .about-cart-name:hover .cart-minus {
-  display: block;
-  color: #ffffff;
-  font-size: 1.5rem;
-  font-weight: bolder;
-  position: absolute;
-  top: 1.35rem;
-  right: 1.1rem;
-  z-index: 3;
 }
 .about-section .about-cart-info {
   display: none;
@@ -343,36 +381,33 @@ header a {
   padding: 0.3rem 0.3rem 0.3rem 0.5rem;
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  .about-section {
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    padding: 5rem 6rem 2rem 6rem;
-    margin-bottom: 4rem;
+  .about-section .about-info {
+    width: 73%;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
   }
-  .about-section .about-cart h2 {
-    margin-bottom: 1rem;
-    font-size: 1rem;
+  .about-section .about-title {
+    width: 87%;
   }
-  .about-section .about-cart h2::after {
-    content: "";
-    width: 1.8rem;
-    height: 1.8rem;
-    background-color: #afafaf;
-    border-radius: 50%;
-    font-size: 2rem;
-    position: absolute;
-    right: -18.3rem;
-    border: 4px solid #626262;
+  .about-section .about-title h2 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-size: 1.82rem;
+    line-height: 2.5rem;
+    font-weight: 700;
+    color: #373a3c;
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 1rem;
   }
-  .about-section .about-cart h2::before {
-    content: "";
-    width: 3rem;
-    height: 0.5rem;
-    background-color: #afafaf;
-    font-size: 2rem;
-    position: absolute;
-    right: -20rem;
-    top: 0.9rem;
-    z-index: 2;
+  .about-section .about-title h3 {
+    width: 70%;
+    font-size: 1.125rem;
+    margin: 0 auto;
+    text-align: center;
+    font-family: "Roboto";
+    font-weight: 300;
+    padding-bottom: 2rem;
   }
   .about-section .about-cart-info p {
     font-size: 1rem;
@@ -391,10 +426,15 @@ header a {
   }
 }
 @media screen and (min-width: 320px) and (max-width: 768px) {
-  .about-section {
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    padding: 3rem 2rem 2rem 2rem;
-    margin-bottom: 4rem;
+  .about-section .about-info {
+    width: 92%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  .about-section .about-title {
+    width: 92%;
   }
   .about-section .about-title h2 {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -415,12 +455,6 @@ header a {
     font-weight: 300;
     padding-bottom: 1rem;
   }
-  .about-section .about-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-  }
   .about-section .left-about-info,
   .about-section .right-about-info {
     width: 100%;
@@ -428,37 +462,6 @@ header a {
   .about-section .about-cart h2 {
     margin-bottom: 1rem;
     font-size: 1rem;
-  }
-  .about-section .about-cart h2::before {
-    content: "";
-    display: none;
-  }
-  .about-section .about-cart h2::after {
-    content: "";
-    display: none;
-  }
-  .about-section .about-cart-name::after {
-    content: "";
-    width: 1.5rem;
-    height: 1.5rem;
-    background-color: #afafaf;
-    border-radius: 50%;
-    font-size: 2rem;
-    position: absolute;
-    top: 0.7rem;
-    right: 1rem;
-    border: 4px solid #626262;
-  }
-  .about-section .about-cart-name::before {
-    content: "";
-    width: 2rem;
-    height: 0.5rem;
-    background-color: #afafaf;
-    font-size: 2rem;
-    position: absolute;
-    right: 0;
-    top: 1.45rem;
-    z-index: 2;
   }
   .about-section .cart-plus {
     color: #ffffff;
@@ -498,21 +501,38 @@ header a {
 
 /*** SERVICE ******************************************************************************************************/
 .service-section {
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 5rem 13rem 2rem 13rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 6rem;
 }
 .service-section .service-title h2 {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: 2.5rem;
+  font-size: 2.222rem;
   line-height: 2.5rem;
   font-weight: 700;
   color: #373a3c;
   text-transform: uppercase;
   text-align: center;
-  padding-bottom: 4rem;
+  padding-bottom: 3rem;
+  padding-top: 2rem;
+}
+.service-section .service-title h3 {
+  width: 75%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.2rem;
+  font-family: "Roboto";
+  font-weight: 300;
+  padding-bottom: 2rem;
 }
 .service-section .service-info {
+  width: 73%;
   display: flex;
   justify-content: space-between;
   gap: 2rem;
@@ -573,9 +593,29 @@ header a {
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .service-section {
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    padding: 5rem 6rem 2rem 6rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 4rem;
+  }
+  .service-section .service-title {
+    width: 87%;
+  }
+  .service-section .service-title h2 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-size: 1.82rem;
+    line-height: 2.5rem;
+    font-weight: 700;
+    color: #373a3c;
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 1rem;
+    padding-bottom: 3rem;
   }
   .service-section .service-cart .icon-div {
     text-align: center;
@@ -599,10 +639,15 @@ header a {
   }
 }
 @media screen and (min-width: 320px) and (max-width: 768px) {
-  .service-section {
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    padding: 3rem 2rem 2rem 2rem;
-    margin-bottom: 4rem;
+  .service-section .service-info {
+    width: 92%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  .service-section .service-title {
+    width: 92%;
   }
   .service-section .service-title h2 {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -622,12 +667,6 @@ header a {
     font-family: "Roboto";
     font-weight: 300;
     padding-bottom: 1rem;
-  }
-  .service-section .service-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
   }
   .service-section .service-cart {
     width: 100%;
@@ -660,8 +699,8 @@ header a {
 
 /*** JOIN ******************************************************************************************************/
 .join-section {
-  padding: 7rem;
-  padding-top: 6rem;
+  padding: 7%;
+  padding-top: 6%;
   margin-bottom: 4rem;
   background-image: url("../assets/joinus/joinbg.jpg");
 }
@@ -674,9 +713,10 @@ header a {
   text-transform: uppercase;
   text-align: center;
   padding-bottom: 3rem;
+  padding-top: 2rem;
 }
 .join-section h3 {
-  width: 85%;
+  width: 75%;
   margin: 0 auto;
   text-align: center;
   font-size: 1.2rem;
@@ -714,8 +754,14 @@ header a {
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .join-section {
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    padding: 5rem 6rem 2rem 6rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 4rem;
   }
   .join-section h2 {
@@ -749,39 +795,17 @@ header a {
   }
 }
 @media screen and (min-width: 320px) and (max-width: 768px) {
-  .join-section {
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    padding: 3rem 2rem 2rem 2rem;
-    margin-bottom: 4rem;
-  }
   .join-section h2 {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    font-size: 1.4rem;
-    line-height: 2.5rem;
-    font-weight: 700;
-    color: #373a3c;
-    text-transform: uppercase;
-    text-align: center;
-    padding-bottom: 1rem;
-  }
-  .join-section h3 {
-    width: 85%;
-    margin: 0 auto;
-    text-align: center;
-    font-size: 1rem;
-    font-family: "Roboto";
-    font-weight: 300;
-    padding-bottom: 1rem;
-  }
-  .join-section h2 {
-    padding-top: 1rem;
     color: #ffffff;
+    font-size: 1.5rem;
+    line-height: 1.4rem;
+    padding-bottom: 1.5rem;
   }
   .join-section h3 {
     color: #ffffff;
     padding: 0 1rem;
     padding-bottom: 2rem;
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
   .join-section .icon-div {
     text-align: center;
@@ -805,11 +829,20 @@ header a {
 
 /*** OFFER ******************************************************************************************************/
 .offer-section {
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 5rem 13rem 2rem 13rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 6rem;
 }
-.offer-section .offer-title h2 {
+.offer-section .offer-section-info .offer-title {
+  width: 73%;
+}
+.offer-section .offer-section-info .offer-title h2 {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 2.222rem;
   line-height: 2.5rem;
@@ -818,9 +851,10 @@ header a {
   text-transform: uppercase;
   text-align: center;
   padding-bottom: 3rem;
+  padding-top: 2rem;
 }
-.offer-section .offer-title h3 {
-  width: 85%;
+.offer-section .offer-section-info .offer-title h3 {
+  width: 75%;
   margin: 0 auto;
   text-align: center;
   font-size: 1.2rem;
@@ -828,12 +862,13 @@ header a {
   font-weight: 300;
   padding-bottom: 2rem;
 }
-.offer-section .offer-info {
+.offer-section .offer-section-info .offer-info {
+  width: 73%;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.offer-section .offer-cart {
+.offer-section .offer-section-info .offer-cart {
   display: flex;
   justify-content: space-between;
   gap: 2rem;
@@ -841,21 +876,21 @@ header a {
   width: 49%;
   margin-top: 3rem;
 }
-.offer-section .offer-cart-icon {
+.offer-section .offer-section-info .offer-cart-icon {
   background-color: #ec4848;
   width: 23%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.offer-section .offer-cart-icon i {
+.offer-section .offer-section-info .offer-cart-icon i {
   color: #ffffff;
   font-size: 2rem;
 }
-.offer-section .offer-cart-info {
+.offer-section .offer-section-info .offer-cart-info {
   width: 76%;
 }
-.offer-section .offer-cart-info h2 {
+.offer-section .offer-section-info .offer-cart-info h2 {
   padding: 1.5rem 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 700;
@@ -866,7 +901,7 @@ header a {
   padding-bottom: 0.9rem;
   color: #3f444a;
 }
-.offer-section .offer-cart-info h3 {
+.offer-section .offer-section-info .offer-cart-info h3 {
   padding: 1rem 0;
   padding-top: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -875,28 +910,52 @@ header a {
   padding-bottom: 0.7rem;
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  .offer-section {
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    padding: 5rem 6rem 2rem 6rem;
+  .offer-section .offer-section-info {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 4rem;
+    width: 87%;
   }
-  .offer-section .offer-cart-icon i {
+  .offer-section .offer-section-info .offer-title {
+    width: 87%;
+  }
+  .offer-section .offer-section-info .offer-title h2 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-size: 1.82rem;
+    line-height: 2.5rem;
+    font-weight: 700;
+    color: #373a3c;
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+  .offer-section .offer-section-info .offer-cart-icon i {
     font-size: 1.5rem;
   }
-  .offer-section .offer-cart-info h2 {
+  .offer-section .offer-section-info .offer-info {
+    width: 100%;
+  }
+  .offer-section .offer-section-info .offer-info .offer-cart-info h2 {
     font-size: 1.1rem;
   }
-  .offer-section .offer-cart-info h3 {
-    font-size: 0.9rem;
+  .offer-section .offer-section-info .offer-info .offer-cart-info h3 {
+    font-size: 1.1rem;
   }
 }
 @media screen and (min-width: 320px) and (max-width: 768px) {
-  .offer-section {
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    padding: 3rem 2rem 2rem 2rem;
-    margin-bottom: 4rem;
+  .offer-section .offer-section-info {
+    width: 92%;
   }
-  .offer-section .offer-title h2 {
+  .offer-section .offer-section-info .offer-title {
+    width: 92%;
+  }
+  .offer-section .offer-section-info .offer-title h2 {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     font-size: 1.4rem;
     line-height: 2.5rem;
@@ -906,79 +965,108 @@ header a {
     text-align: center;
     padding-bottom: 1rem;
   }
-  .offer-section .offer-title h3 {
-    width: 85%;
-    margin: 0 auto;
-    text-align: center;
-    font-size: 1rem;
-    font-family: "Roboto";
-    font-weight: 300;
-    padding-bottom: 1rem;
-  }
-  .offer-section .offer-info {
+  .offer-section .offer-section-info .offer-info {
+    width: 92%;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2rem;
+    gap: 0;
   }
-  .offer-section .offer-cart {
+  .offer-section .offer-section-info .offer-info .offer-cart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    gap: 0;
     width: 100%;
   }
-  .offer-section .offer-cart-icon {
-    min-width: 25%;
-    max-width: 30%;
+  .offer-section .offer-section-info .offer-info .offer-cart .offer-cart-icon {
+    width: unset;
+    width: 24vw;
+    height: 17vh;
   }
-  .offer-section .offer-cart-info {
-    min-width: 75%;
-    max-width: 70%;
-  }
-  .offer-section .offer-cart-icon i {
+  .offer-section .offer-section-info .offer-info .offer-cart .offer-cart-icon i {
     font-size: 1.5rem;
   }
-  .offer-section .offer-cart-info h2 {
-    font-size: 1rem;
-    padding-bottom: 1rem;
+  .offer-section .offer-section-info .offer-info .offer-cart .offer-cart-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    gap: 0;
   }
-  .offer-section .offer-cart-info h3 {
-    font-size: 0.9rem;
+  .offer-section .offer-section-info .offer-info .offer-cart .offer-cart-info h2 {
+    font-size: 1rem;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+  }
+  .offer-section .offer-section-info .offer-info .offer-cart .offer-cart-info h3 {
+    font-size: 1.1rem;
     padding-bottom: 1rem;
+    text-align: center;
   }
 }
 
 /*** REVIEW ******************************************************************************************************/
 .review-section {
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 5rem 13rem 2rem 13rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 6rem;
+}
+.review-section .review-title {
+  width: 73%;
 }
 .review-section .review-title h2 {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: 2.5rem;
+  font-size: 2.222rem;
   line-height: 2.5rem;
   font-weight: 700;
   color: #373a3c;
   text-transform: uppercase;
   text-align: center;
-  padding-bottom: 4rem;
+  padding-bottom: 3rem;
+  padding-top: 2rem;
+}
+.review-section .review-title h3 {
+  width: 75%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.2rem;
+  font-family: "Roboto";
+  font-weight: 300;
+  padding-bottom: 2rem;
 }
 .review-section .review-info {
+  width: 73%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
   margin: 0 auto;
 }
-.review-section .review-cart-img {
-  width: 17%;
-}
-.review-section .review-cart-info {
-  width: 83%;
-}
-.review-section .review-cart {
+.review-section .review-info .review-cart {
   display: flex;
   justify-content: space-between;
   gap: 2rem;
+  justify-content: center;
   align-items: center;
   gap: 3rem;
   margin-top: 3rem;
 }
-.review-section .review-cart-info h2 {
+.review-section .review-info .review-cart .review-cart-img {
+  width: 17%;
+}
+.review-section .review-info .review-cart .review-cart-info {
+  width: 60%;
+}
+.review-section .review-info .review-cart .review-cart-info h2 {
   padding: 1.5rem 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 700;
@@ -988,7 +1076,7 @@ header a {
   font-size: 1.5rem;
   color: #3f444a;
 }
-.review-section .review-cart-info h3 {
+.review-section .review-info .review-cart .review-cart-info h3 {
   padding: 1.5rem 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 700;
@@ -998,56 +1086,55 @@ header a {
   color: #ec4848;
   text-transform: uppercase;
 }
-.review-section .review-cart-info p {
+.review-section .review-info .review-cart .review-cart-info p {
   padding: 1.5rem 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 700;
   font-size: 1.2rem;
   font-weight: 300;
-  width: 75%;
   padding-top: 0;
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  .review-section {
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    padding: 5rem 6rem 2rem 6rem;
-    margin-bottom: 4rem;
+  .review-section .review-title {
+    width: 87%;
   }
   .review-section .review-title h2 {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    font-size: 2.5rem;
+    font-size: 1.82rem;
     line-height: 2.5rem;
     font-weight: 700;
     color: #373a3c;
     text-transform: uppercase;
     text-align: center;
-    padding-bottom: 4rem;
+    padding-bottom: 1rem;
   }
   .review-section .review-info {
     margin: 0 auto;
   }
-  .review-section .review-cart-img {
-    width: 20%;
+  .review-section .review-info .review-cart-img {
+    min-width: 25%;
+    max-width: 25%;
   }
-  .review-section .review-cart-info {
+  .review-section .review-info .review-cart-img img {
+    border-radius: 50%;
+  }
+  .review-section .review-info .review-cart-info {
     width: 79%;
   }
-  .review-section .review-cart-info h2 {
-    font-size: 1.1rem;
+  .review-section .review-info .review-cart-info h2 {
+    font-size: 1.3rem;
   }
-  .review-section .review-cart-info h3 {
+  .review-section .review-info .review-cart-info h3 {
     font-size: 0.8rem;
   }
-  .review-section .review-cart-info p {
-    font-size: 0.9rem;
+  .review-section .review-info .review-cart-info p {
+    font-size: 1.1rem;
     width: 75%;
   }
 }
 @media screen and (min-width: 320px) and (max-width: 768px) {
-  .review-section {
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    padding: 3rem 2rem 2rem 2rem;
-    margin-bottom: 4rem;
+  .review-section .review-title {
+    width: 92%;
   }
   .review-section .review-title h2 {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -1059,69 +1146,88 @@ header a {
     text-align: center;
     padding-bottom: 1rem;
   }
-  .review-section .review-title h3 {
-    width: 85%;
-    margin: 0 auto;
-    text-align: center;
-    font-size: 1rem;
-    font-family: "Roboto";
-    font-weight: 300;
-    padding-bottom: 1rem;
-  }
   .review-section .review-info {
     margin: 0 auto;
   }
-  .review-section .review-cart {
+  .review-section .review-info .review-cart {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
     margin-top: 1.5rem;
   }
-  .review-section .review-cart-img {
-    min-width: 25%;
-    max-width: 30%;
+  .review-section .review-info .review-cart .review-cart-img {
+    min-width: 50%;
+    max-width: 50%;
   }
-  .review-section .review-cart-info {
-    min-width: 69%;
-    max-width: 64%;
+  .review-section .review-info .review-cart .review-cart-info {
+    min-width: 100%;
+    text-align: center;
   }
-  .review-section .review-cart-info h2 {
-    font-size: 1rem;
-    width: 70%;
+  .review-section .review-info .review-cart .review-cart-info h2 {
+    font-size: 1.2rem;
+    width: 100%;
   }
-  .review-section .review-cart-info h3 {
-    font-size: 0.7rem;
-    width: 70%;
-  }
-  .review-section .review-cart-info p {
+  .review-section .review-info .review-cart .review-cart-info h3 {
     font-size: 0.8rem;
-    width: 75%;
+    width: 100%;
+  }
+  .review-section .review-info .review-cart .review-cart-info p {
+    font-size: 1rem;
+    width: 100%;
   }
 }
 
 /*** Daily-Statistics ******************************************************************************************************/
 .daily-statistics-section {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 6rem;
+  min-height: unset;
   background-image: url(../assets/daily-statistics/counterbg.jpg);
+  background-repeat: no-repeat;
 }
 .daily-statistics-section .overlay {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 6rem;
+  min-height: unset;
+  margin-bottom: 0;
+  padding: 4.5% 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.daily-statistics-section .overlay .daily-statistics-info {
   display: flex;
   justify-content: space-between;
   gap: 2rem;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 5rem 13rem 2rem 13rem;
+  width: 73%;
 }
-.daily-statistics-section .daily-statistics-cart {
+.daily-statistics-section .overlay .daily-statistics-info .daily-statistics-cart {
   background-color: rgba(236, 72, 72, 0.5);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1.5rem 1rem;
-  width: 15rem;
+  padding-top: 1rem;
+  width: 16rem;
   height: 13rem;
 }
-.daily-statistics-section .daily-statistics-cart i {
+.daily-statistics-section .overlay .daily-statistics-info .daily-statistics-cart i {
   color: #ffffff;
   font-size: 2.5rem;
 }
-.daily-statistics-section .daily-statistics-cart h3 {
+.daily-statistics-section .overlay .daily-statistics-info .daily-statistics-cart h3 {
   padding: 1.5rem 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 700;
@@ -1129,7 +1235,7 @@ header a {
   font-size: 2.5rem;
   color: #ffffff;
 }
-.daily-statistics-section .daily-statistics-cart p {
+.daily-statistics-section .overlay .daily-statistics-info .daily-statistics-cart p {
   padding: 1rem 0;
   padding-top: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -1140,18 +1246,24 @@ header a {
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .daily-statistics-section .overlay {
-    padding: 5rem 6rem 2rem 6rem;
+    min-height: unset;
+    margin-bottom: 0;
+    padding: 4.5% 0;
+    background: rgba(0, 0, 0, 0.5);
   }
-  .daily-statistics-section .daily-statistics-cart {
-    padding: 1.5rem 0.7rem;
+  .daily-statistics-section .overlay .daily-statistics-info {
+    width: 87%;
+  }
+  .daily-statistics-section .overlay .daily-statistics-info .daily-statistics-cart {
+    padding-top: 0.5rem;
     width: 17rem;
     height: 10rem;
   }
-  .daily-statistics-section .daily-statistics-cart i {
+  .daily-statistics-section .overlay .daily-statistics-info .daily-statistics-cart i {
     color: #ffffff;
     font-size: 2rem;
   }
-  .daily-statistics-section .daily-statistics-cart h3 {
+  .daily-statistics-section .overlay .daily-statistics-info .daily-statistics-cart h3 {
     padding: 1.5rem 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     font-weight: 700;
@@ -1161,7 +1273,7 @@ header a {
     font-size: 2rem;
     color: #ffffff;
   }
-  .daily-statistics-section .daily-statistics-cart p {
+  .daily-statistics-section .overlay .daily-statistics-info .daily-statistics-cart p {
     padding: 1rem 0;
     padding-top: 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -1179,23 +1291,29 @@ header a {
     background-repeat: no-repeat;
   }
   .daily-statistics-section .overlay {
+    min-height: unset;
+    margin-bottom: 0;
+    padding: 7% 0;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  .daily-statistics-section .overlay .daily-statistics-info {
+    width: 95%;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2rem;
-    gap: 1rem;
-    padding: 3rem 3rem 2rem 3rem;
+    gap: 0.8rem;
   }
-  .daily-statistics-section .daily-statistics-cart {
-    padding: 1rem 0.7rem 2rem 0.7rem;
+  .daily-statistics-section .overlay .daily-statistics-info .daily-statistics-cart {
+    padding: 4% 1% 4% 1%;
     height: inherit;
     width: 100%;
   }
-  .daily-statistics-section .daily-statistics-cart i {
+  .daily-statistics-section .overlay .daily-statistics-info .daily-statistics-cart i {
     color: #ffffff;
     font-size: 1.5rem;
   }
-  .daily-statistics-section .daily-statistics-cart h3 {
+  .daily-statistics-section .overlay .daily-statistics-info .daily-statistics-cart h3 {
     padding: 1.5rem 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     font-weight: 700;
@@ -1205,7 +1323,7 @@ header a {
     font-size: 1.8rem;
     color: #ffffff;
   }
-  .daily-statistics-section .daily-statistics-cart p {
+  .daily-statistics-section .overlay .daily-statistics-info .daily-statistics-cart p {
     padding: 1rem 0;
     padding-top: 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -1219,9 +1337,19 @@ header a {
 
 /*** OUR TEAM ******************************************************************************************************/
 .our-team-section {
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 5rem 13rem 2rem 13rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 6rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+.our-team-section .our-team-title {
+  width: 73%;
 }
 .our-team-section .our-team-title h2 {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -1232,9 +1360,10 @@ header a {
   text-transform: uppercase;
   text-align: center;
   padding-bottom: 3rem;
+  padding-top: 2rem;
 }
 .our-team-section .our-team-title h3 {
-  width: 85%;
+  width: 75%;
   margin: 0 auto;
   text-align: center;
   font-size: 1.2rem;
@@ -1243,6 +1372,7 @@ header a {
   padding-bottom: 2rem;
 }
 .our-team-section .our-team-info {
+  width: 73%;
   display: flex;
   justify-content: space-between;
   gap: 2rem;
@@ -1314,12 +1444,40 @@ header a {
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .our-team-section {
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    padding: 5rem 6rem 2rem 6rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 4rem;
   }
+  .our-team-section .our-team-title {
+    width: 87%;
+  }
+  .our-team-section .our-team-title h2 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-size: 1.82rem;
+    line-height: 2.5rem;
+    font-weight: 700;
+    color: #373a3c;
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 1rem;
+  }
   .our-team-section .our-team-title h3 {
-    font-size: 1rem;
+    width: 70%;
+    font-size: 1.125rem;
+    margin: 0 auto;
+    text-align: center;
+    font-family: "Roboto";
+    font-weight: 300;
+    padding-bottom: 2rem;
+  }
+  .our-team-section .our-team-info {
+    width: 87%;
   }
   .our-team-section .our-team-cart {
     background-repeat: no-repeat;
@@ -1352,11 +1510,15 @@ header a {
   }
 }
 @media screen and (min-width: 320px) and (max-width: 768px) {
-  .our-team-section {
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    padding: 3rem 2rem 2rem 2rem;
-    margin-bottom: 4rem;
-    padding: 3rem 3rem 2rem 3rem;
+  .our-team-section .our-team-info {
+    width: 92%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  .our-team-section .our-team-title {
+    width: 92%;
   }
   .our-team-section .our-team-title h2 {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -1376,12 +1538,6 @@ header a {
     font-family: "Roboto";
     font-weight: 300;
     padding-bottom: 1rem;
-  }
-  .our-team-section .our-team-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
   }
   .our-team-section .our-team-cart {
     background-repeat: no-repeat;
@@ -1414,10 +1570,19 @@ header a {
 
 /*** OUR WORK ******************************************************************************************************/
 .our-work-section {
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 5rem 13rem 2rem 13rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 6rem;
   /*** CARD OVERLAY************************/
+}
+.our-work-section .our-work-title {
+  width: 73%;
 }
 .our-work-section .our-work-title h2 {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -1428,15 +1593,22 @@ header a {
   text-transform: uppercase;
   text-align: center;
   padding-bottom: 3rem;
+  padding-top: 2rem;
 }
 .our-work-section .our-work-title h3 {
-  width: 85%;
+  width: 75%;
   margin: 0 auto;
   text-align: center;
   font-size: 1.2rem;
   font-family: "Roboto";
   font-weight: 300;
   padding-bottom: 2rem;
+}
+.our-work-section .our-work-title h2 {
+  padding-bottom: 2rem;
+}
+.our-work-section .our-work-info {
+  width: 73%;
 }
 .our-work-section .our-work-menu {
   width: 50%;
@@ -1540,12 +1712,32 @@ header a {
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .our-work-section {
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    padding: 5rem 6rem 2rem 6rem;
-    margin-bottom: 4rem;
+    padding-bottom: 2rem;
   }
   .our-work-section .our-work-title {
-    font-size: 1rem;
+    width: 87%;
+  }
+  .our-work-section .our-work-title h2 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-size: 1.82rem;
+    line-height: 2.5rem;
+    font-weight: 700;
+    color: #373a3c;
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+  .our-work-section .our-work-title h3 {
+    width: 70%;
+    font-size: 1.125rem;
+    margin: 0 auto;
+    text-align: center;
+    font-family: "Roboto";
+    font-weight: 300;
+    padding-bottom: 2rem;
+  }
+  .our-work-section .our-work-info {
+    width: 87%;
   }
   .our-work-section .our-work-menu {
     width: 70%;
@@ -1553,12 +1745,36 @@ header a {
 }
 @media screen and (min-width: 320px) and (max-width: 768px) {
   .our-work-section {
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    padding: 3rem 2rem 2rem 2rem;
-    margin-bottom: 4rem;
+    padding-bottom: 3rem;
+  }
+  .our-work-section .our-work-info {
+    width: 92%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  .our-work-section .our-work-title {
+    width: 92%;
+  }
+  .our-work-section .our-work-title h2 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+    font-weight: 700;
+    color: #373a3c;
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 1rem;
   }
   .our-work-section .our-work-title h3 {
+    width: 85%;
+    margin: 0 auto;
+    text-align: center;
     font-size: 1rem;
+    font-family: "Roboto";
+    font-weight: 300;
+    padding-bottom: 1rem;
   }
   .our-work-section .our-work-menu {
     padding: 0;
@@ -1611,6 +1827,397 @@ header a {
   }
   .our-work-section .our-work-card-info {
     padding: 0 1rem;
+  }
+}
+
+/*** FOOTER ******************************************************************************************************/
+footer .up-footer {
+  margin-bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #312b2b;
+}
+footer .up-footer .up-footer-info {
+  width: 73%;
+}
+footer .up-footer .up-footer-info h2 {
+  padding: 1.5rem 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #ffffff;
+}
+footer .up-footer .up-footer-info input {
+  width: 32rem;
+  padding: 1.2rem;
+  padding-left: 0.5rem;
+  outline: none;
+  border: none;
+  border-radius: 0.3rem;
+}
+footer .up-footer .up-footer-info .search-div {
+  background-color: #ec4848;
+  position: relative;
+  width: 3rem;
+  right: 0rem;
+  padding: 0.945rem;
+  border-radius: 0 0.3rem 0.3rem 0;
+}
+footer .up-footer .up-footer-info i {
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+footer .mid-footer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  background-color: #151515;
+  border-bottom: 0.1rem solid #534a4a;
+}
+footer .mid-footer .mid-footer-info {
+  width: 73%;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  justify-content: flex-start;
+}
+footer .mid-footer .footer-info {
+  width: 24%;
+}
+footer .mid-footer .footer-info .footer-img {
+  padding: 1rem 0;
+  margin-left: -0.5rem;
+}
+footer .mid-footer .footer-info img {
+  width: 60%;
+}
+footer .mid-footer .footer-info .footer-info-div p {
+  padding: 1rem 0;
+  padding-top: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 300;
+  font-size: 1.2rem;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8235294118);
+}
+footer .mid-footer .footer-info .footer-social-meidas {
+  width: 70%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  gap: 0;
+}
+footer .mid-footer .footer-info .footer-social-meidas .social-media {
+  padding: 0.3rem 0.7rem;
+  transition: 0.2s linear;
+}
+footer .mid-footer .footer-info .footer-social-meidas .social-media:hover {
+  background-color: #ec4848;
+}
+footer .mid-footer .footer-info .footer-social-meidas a {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #151515;
+}
+footer .mid-footer .footer-some-features {
+  width: 24%;
+}
+footer .mid-footer .footer-some-features h3 {
+  padding: 1.5rem 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+footer .mid-footer .footer-some-features li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: rgba(255, 255, 255, 0.8235294118);
+  padding-bottom: 0.5rem;
+}
+footer .mid-footer .footer-some-features li i {
+  color: #ec4848;
+}
+footer .mid-footer .footer-tags {
+  width: 24%;
+}
+footer .mid-footer .footer-tags h3 {
+  padding: 1.5rem 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+footer .mid-footer .footer-tags ul {
+  width: 85%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding: 0.2rem;
+}
+footer .mid-footer .footer-tags ul li {
+  background-color: #ec4848;
+  margin-bottom: 0.5rem;
+  padding: 0.4rem 0.5rem;
+}
+footer .mid-footer .footer-tags ul li a {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #ffffff;
+}
+footer .mid-footer .footer-flicker-posts {
+  width: 24%;
+}
+footer .mid-footer .footer-flicker-posts h3 {
+  padding: 1.5rem 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+footer .mid-footer .footer-flicker-posts .footer-img {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  justify-content: start;
+  flex-wrap: wrap;
+  gap: 0.1rem;
+}
+footer .mid-footer .footer-flicker-posts .footer-img img {
+  width: 20.5%;
+  margin-bottom: 0.5rem;
+}
+footer .down-footer {
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: #151515;
+}
+footer .down-footer .down-footer-info {
+  width: 73%;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  align-items: center;
+}
+footer .down-footer .down-footer-info .left-footer {
+  padding-left: 2rem;
+}
+footer .down-footer .down-footer-info .left-footer h2 {
+  padding: 1.5rem 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #ffffff;
+  font-weight: 300;
+  letter-spacing: 0.03rem;
+}
+footer .down-footer .down-footer-info .left-footer i {
+  color: #ec4848;
+}
+footer .down-footer .down-footer-info .left-footer span {
+  cursor: pointer;
+  color: #ec4848;
+}
+footer .down-footer .down-footer-info .right-footer ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  justify-content: flex-start;
+  gap: 0.7rem;
+}
+footer .down-footer .down-footer-info .right-footer ul i {
+  font-size: 1.1rem;
+  color: #737373;
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  footer .up-footer,
+  footer .mid-footer,
+  footer .down-footer {
+    margin-bottom: 0;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+  }
+  footer .up-footer p,
+  footer .mid-footer p,
+  footer .down-footer p {
+    font-size: 0.9rem;
+  }
+  footer .up-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  footer .up-footer .up-footer-info {
+    width: 87%;
+    width: 80%;
+    display: unset;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  footer .up-footer .up-footer-info h2 {
+    font-size: 1.1rem;
+  }
+  footer .up-footer .up-footer-info input {
+    width: 20rem;
+    padding: 0.8rem;
+    padding-left: 0.5rem;
+    position: relative;
+  }
+  footer .up-footer .up-footer-info .search-div {
+    position: absolute;
+    right: 4.8rem;
+    padding: 0.54rem;
+    border-radius: 0 0.3rem 0.3rem 0;
+    z-index: 3;
+  }
+  footer .mid-footer .footer-info .footer-social-meidas {
+    width: 100%;
+  }
+  footer .mid-footer .footer-info .footer-social-meidas .social-media {
+    padding: 0.2rem 0.3rem;
+    transition: 0.2s linear;
+  }
+  footer .mid-footer .footer-info .footer-social-meidas .social-media:hover {
+    background-color: #ec4848;
+  }
+  footer .mid-footer .footer-info .footer-social-meidas a {
+    font-size: 0.9rem;
+  }
+  footer .down-footer {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4rem;
+    min-height: 2vh;
+    margin-bottom: 0;
+    padding: 0;
+  }
+  footer .down-footer .down-footer-info {
+    width: 87%;
+    width: 80%;
+  }
+  footer .down-footer .down-footer-info .left-footer {
+    padding-left: 0;
+  }
+  footer .down-footer .down-footer-info .left-footer h2 {
+    text-align: center;
+    width: 80%;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  footer .mid-footer {
+    width: 92%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    margin-bottom: 0;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+  }
+  footer .up-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  footer .up-footer .up-footer-info {
+    width: 92%;
+    width: 90%;
+    display: unset;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.2rem;
+  }
+  footer .up-footer .up-footer-info h2 {
+    font-size: 1rem;
+  }
+  footer .up-footer .up-footer-info input {
+    width: 20rem;
+    padding: 0.7rem;
+    padding-left: 0.5rem;
+    position: relative;
+  }
+  footer .up-footer .up-footer-info .search-div {
+    position: absolute;
+    right: 3.8rem;
+    padding: 0.427rem;
+    border-radius: 0 0.3rem 0.3rem 0;
+    z-index: 3;
+  }
+  footer .mid-footer .mid-footer-info {
+    width: 92%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    gap: 0.2rem;
+  }
+  footer .mid-footer .mid-footer-info .footer-info,
+  footer .mid-footer .mid-footer-info .footer-some-features,
+  footer .mid-footer .mid-footer-info .footer-tags,
+  footer .mid-footer .mid-footer-info .footer-flicker-posts {
+    width: 100%;
+  }
+  footer .mid-footer .mid-footer-info .footer-info .footer-social-meidas,
+  footer .mid-footer .mid-footer-info .footer-some-features .footer-social-meidas,
+  footer .mid-footer .mid-footer-info .footer-tags .footer-social-meidas,
+  footer .mid-footer .mid-footer-info .footer-flicker-posts .footer-social-meidas {
+    width: 36%;
+  }
+  footer .mid-footer .mid-footer-info .footer-info .footer-social-meidas .social-media,
+  footer .mid-footer .mid-footer-info .footer-some-features .footer-social-meidas .social-media,
+  footer .mid-footer .mid-footer-info .footer-tags .footer-social-meidas .social-media,
+  footer .mid-footer .mid-footer-info .footer-flicker-posts .footer-social-meidas .social-media {
+    padding: 0.2rem 0.3rem;
+    transition: 0.2s linear;
+  }
+  footer .mid-footer .mid-footer-info .footer-info .footer-social-meidas .social-media:hover,
+  footer .mid-footer .mid-footer-info .footer-some-features .footer-social-meidas .social-media:hover,
+  footer .mid-footer .mid-footer-info .footer-tags .footer-social-meidas .social-media:hover,
+  footer .mid-footer .mid-footer-info .footer-flicker-posts .footer-social-meidas .social-media:hover {
+    background-color: #ec4848;
+  }
+  footer .mid-footer .mid-footer-info .footer-info .footer-social-meidas a,
+  footer .mid-footer .mid-footer-info .footer-some-features .footer-social-meidas a,
+  footer .mid-footer .mid-footer-info .footer-tags .footer-social-meidas a,
+  footer .mid-footer .mid-footer-info .footer-flicker-posts .footer-social-meidas a {
+    font-size: 0.9rem;
+  }
+  footer .down-footer .down-footer-info {
+    width: 92%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    align-items: flex-start;
+    gap: 0.2rem;
+  }
+  footer .down-footer .down-footer-info .left-footer h2 {
+    padding-top: 0.7rem;
+    font-size: 1.1rem;
   }
 }
 
