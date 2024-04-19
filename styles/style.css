@@ -10,6 +10,7 @@
   padding: 0;
   border: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 ul,
@@ -379,6 +380,9 @@ header .header-info a {
   padding: 0.3rem 0.3rem 0.3rem 0.5rem;
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
+  .about-section {
+    min-height: 50vh;
+  }
   .about-section .about-info {
     width: 73%;
     display: flex;
@@ -594,12 +598,13 @@ header .header-info a {
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     width: 100%;
-    min-height: 100vh;
+    min-height: 60vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-bottom: 4rem;
+    min-height: 50vh;
   }
   .service-section .service-title {
     width: 87%;
@@ -755,12 +760,13 @@ header .header-info a {
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     width: 100%;
-    min-height: 100vh;
+    min-height: 60vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-bottom: 4rem;
+    min-height: 35vh;
   }
   .join-section h2 {
     padding-top: 1rem;
@@ -919,17 +925,22 @@ header .header-info a {
   padding-bottom: 0.7rem;
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
+  .offer-section {
+    min-height: 50vh;
+  }
   .offer-section .offer-section-info {
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     width: 100%;
-    min-height: 100vh;
+    min-height: 60vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-bottom: 4rem;
     width: 87%;
+    border: none;
+    min-height: 50vh;
   }
   .offer-section .offer-section-info .offer-title {
     width: 87%;
@@ -1104,6 +1115,9 @@ header .header-info a {
   padding-top: 0;
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
+  .review-section {
+    min-height: 50vh;
+  }
   .review-section .review-title {
     width: 87%;
   }
@@ -1456,12 +1470,13 @@ header .header-info a {
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     width: 100%;
-    min-height: 100vh;
+    min-height: 60vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-bottom: 4rem;
+    min-height: 50vh;
   }
   .our-team-section .our-team-title {
     width: 87%;
@@ -1725,6 +1740,7 @@ header .header-info a {
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .our-work-section {
+    min-height: 60vh;
     padding-bottom: 2rem;
   }
   .our-work-section .our-work-title {
@@ -2155,7 +2171,7 @@ footer .down-footer .down-footer-info .right-footer ul i {
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     width: 100%;
-    min-height: 100vh;
+    min-height: 60vh;
     display: flex;
     flex-direction: column;
     justify-content: center;

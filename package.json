@@ -11,7 +11,15 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Mariam",
   "license": "ISC",
-  "description": ""
+  "description": "sass project",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Marazi26/adventurer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Marazi26/adventurer/issues"
+  },
+  "homepage": "https://github.com/Marazi26/adventurer#readme"
 }

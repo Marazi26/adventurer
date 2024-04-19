@@ -7,6 +7,7 @@
     padding: 0;
     border: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 ul,
@@ -367,6 +368,8 @@ header {
 
     /*** TABLET ABOUT **********************************************************/
     @media screen and (min-width:768px) and (max-width:1024px) {
+        min-height: 50vh;
+        
         .about-info {
             @include section-inside-sizing;
             @include flex-box;
@@ -543,6 +546,7 @@ header {
 
     @media screen and (min-width:768px) and (max-width:1024px) {
         @include section-sizing-tablet;
+        min-height: 50vh;
 
         .service-title {
             @include section-inside-sizing-tablet;
@@ -667,6 +671,7 @@ header {
 
     @media screen and (min-width:768px) and (max-width:1024px) {
         @include section-sizing-tablet;
+        min-height: 35vh;
 
         h2 {
             padding-top: 1rem;
@@ -802,9 +807,13 @@ header {
 
     @media screen and (min-width:768px) and (max-width:1024px) {
 
+        min-height: 50vh;
+        
         .offer-section-info {
             @include section-sizing-tablet;
             @include section-inside-sizing-tablet;
+            border: none;
+            min-height: 50vh;
 
             .offer-title {
                 @include section-inside-sizing-tablet;
@@ -953,6 +962,8 @@ header {
     }
 
     @media screen and (min-width:768px) and (max-width:1024px) {
+
+        min-height: 50vh;
 
         .review-title {
             @include section-inside-sizing-tablet;
@@ -1272,6 +1283,7 @@ header {
 
     @media screen and (min-width:768px) and (max-width:1024px) {
         @include section-sizing-tablet;
+        min-height: 50vh;
 
         .our-team-title {
             @include section-inside-sizing-tablet;
@@ -1487,7 +1499,7 @@ header {
         border: none;
     }
     @media screen and (min-width:768px) and (max-width:1024px) {
-
+        min-height: 60vh;
         padding-bottom: 2rem;
 
         .our-work-title {
