@@ -22,12 +22,12 @@ function colorChange() {
 
   if (scrollValue > 5) {
     nav.style.backgroundColor = "#dddddd";
-    nav.style.paddingTop = "1.2rem";
+    nav.style.paddingTop = "1rem";
     nav.style.paddingBottom = ".9rem";
   } else {
     nav.style.backgroundColor = "#ffffff";
-    nav.style.paddingTop = "2rem";
-    nav.style.paddingBottom = "1.2rem";
+    nav.style.paddingTop = "1.3rem";
+    nav.style.paddingBottom = "1rem";
   }
 }
 
