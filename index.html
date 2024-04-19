@@ -3,10 +3,653 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
+    <title>Adventurer</title>
+    <link rel="icon" type="image/x-icon" href="./assets/logo/logo.png">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script defer src="./scripts/script.js"></script>
 </head>
 <body>
-    hello
+    <nav>
+        <div class="nav-info">
+            <div class="left-nav">
+                <img src="./assets/logo/logo.png" alt="logo">
+            </div>
+            <div class="right-nav">
+                <ul>
+                    <li><a href="#home" class="home-li">Home</a></li>
+                    <li><a href="#about" style="transition: linear;">About</a></li>
+                    <li><a href="#service" style="transition: linear;">Service</a></li>
+                    <li><a href="#team" style="transition: linear;">Team</a></li>
+                    <li><a href="#portfolio" style="transition: linear;">Portfolio</a></li>
+                    <li><a href="#faq" style="transition: linear;">Faq</a></li>
+                    <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                </ul>
+            </div>
+            <div class="burger-nav">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <div class="header-info wow animate__fadeInDown" data-wow-duration="1s" data-wow-delay="0.2s">
+            <h1>ADVENTURER</h1>
+            <p>MURI, A TEMPLATE AT THE HEART OF THE BEAUTY</p>
+            <div class="see-more"><a href="#">See More</a></div>
+        </div>
+    </header>
+
+    <main>
+        <section class="about-section" id="about">
+            <div class="about-title  wow animate__slideInUp" data-wow-duration="1s" data-wow-delay="0.2s">
+                <h2>Who We Are</h2>
+                <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</h3>
+            </div>
+            <div class="about-info">
+                <div class="left-about-info wow animate__bounceInLeft" data-wow-duration="1s" data-wow-delay="0.2s">
+                    <div class="about-cart">
+                        <div class="about-cart-name">
+                            <h2>Lorem ipsum dolor sit amet</h2>
+                        </div>
+                        <div class="about-cart-info">
+                            <p>Consectetur adipiscing elit. Aliquam sagittis nulla non elit dignissim suscipit. Duis lorem nulla, eleifend Ut urna dui, interdum non blandit sed, hendrerit ultricies mi. Aliquam at scelerisque ligula. Curabitur id laoreet velit.</p>
+                        </div>
+                    </div>
+
+                    <div class="about-cart">
+                        <div class="about-cart-name">
+                            <h2>Lorem ipsum dolor sit amet</h2>
+                        </div>
+                        <div class="about-cart-info">
+                            <p>Consectetur adipiscing elit. Aliquam sagittis nulla non elit dignissim suscipit. Duis lorem nulla, eleifend Ut urna dui, interdum non blandit sed, hendrerit ultricies mi. Aliquam at scelerisque ligula. Curabitur id laoreet velit.</p>
+                        </div>
+                    </div>
+
+                    <div class="about-cart">
+                        <div class="about-cart-name">
+                            <h2>Lorem ipsum dolor sit amet</h2>
+                        </div>
+                        <div class="about-cart-info">
+                            <p>Consectetur adipiscing elit. Aliquam sagittis nulla non elit dignissim suscipit. Duis lorem nulla, eleifend Ut urna dui, interdum non blandit sed, hendrerit ultricies mi. Aliquam at scelerisque ligula. Curabitur id laoreet velit.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="right-about-info wow animate__bounceInRight" data-wow-duration="1.5s" data-wow-delay="0.2s">
+                    <div class="about-percentage">
+                        <div class="overlay1">
+                            <h2>Web Development 95%</h2>
+                        </div>
+                    </div>
+
+                    <div class="about-percentage">
+                        <div class="overlay2">
+                            <h2>App Development 90%</h2>
+                        </div>
+                    </div>
+
+                    <div class="about-percentage">
+                        <div class="overlay3">
+                            <h2>Software Development 85%</h2>
+                        </div>
+                    </div>
+
+                    <div class="about-percentage">
+                        <div class="overlay4">
+                            <h2>Graphics Design 80%</h2>
+                        </div>
+                    </div>
+
+                    <div class="about-percentage">
+                        <div class="overlay5">
+                            <h2>Marketing 70%</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="service-section" id="service">
+            <div class="service-title  wow animate__slideInUp" data-wow-duration="1s" data-wow-delay="0.2s">
+                <h2>Our Service</h2>
+            </div>
+            <div class="service-info">
+                <div class="service-cart wow animate__fadeInLeft" data-wow-duration="1s" data-wow-delay="0.2s">
+                    <div class="icon-div">
+                        <i class="fa-solid fa-gear"></i>
+                    </div>
+                    <h3>FREE SUPPORT & UPDATES</h3>
+                    <p>Lorem ipsum dolor sit amet, conse tetuer adipiscing elit, sed diam nonu my nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                    <div class="service-button-div">
+                        <a href="">See more</a>
+                    </div>
+                </div>
+
+                <div class="service-cart wow animate__fadeInUp" data-wow-duration="1.2s" data-wow-delay="0.2s">
+                    <div class="icon-div">
+                        <i class="fa-brands fa-pied-piper-pp"></i>
+                    </div>
+                    <h3>FULLY CUSTOMIZABLE</h3>
+                    <p>Lorem ipsum dolor sit amet, conse tetuer adipiscing elit, sed diam nonu my nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                    <div class="service-button-div">
+                        <a href="">See more</a>
+                    </div>
+                </div>
+
+                <div class="service-cart wow animate__fadeInRight" data-wow-duration="1.5s" data-wow-delay="0.2s">
+                    <div class="icon-div plug-div">
+                        <i class="fa-solid fa-plug"></i>
+                    </div>
+                    <h3>12 THEME WEBSITES</h3>
+                    <p>Lorem ipsum dolor sit amet, conse tetuer adipiscing elit, sed diam nonu my nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                    <div class="service-button-div">
+                        <a href="">See more</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="join-section" id="team">
+            <div class="icon-div wow animate__slideInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">
+                <i class="bi bi-person-fill-add"></i>
+            </div>
+            <h2 class="wow animate__slideInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">JOIN OUR CREATIVE COMPANY</h2>
+            <h3 class="wow animate__slideInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">“ Hello! Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.”</h3>
+            <div class="see-more wow animate__slideInUp" data-wow-duration="1.3s" data-wow-delay="0.2s"><a href="">Join with us</a></div>
+        </section>
+
+        <section class="offer-section" id="portfolio">
+            <div class="offer-section-info">
+                <div class="offer-title  wow animate__slideInUp" data-wow-duration="1s" data-wow-delay="0.2s">
+                    <h2>What We Offer</h2>
+                </div>
+                <div class="offer-info  wow animate__slideInUp" data-wow-duration="1s" data-wow-delay="0.2s">
+                    <div class="offer-cart">
+                        <div class="offer-cart-icon">
+                            <i class="fa-solid fa-cloud"></i>
+                        </div>
+                        <div class="offer-cart-info">
+                            <h2>Technical Analysis</h2>
+                            <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h3>
+                        </div>
+                    </div>
+    
+                    <div class="offer-cart">
+                        <div class="offer-cart-icon">
+                            <i class="fa-solid fa-cart-arrow-down"></i>
+                        </div>
+                        <div class="offer-cart-info">
+                            <h2>Technical Analysis</h2>
+                            <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h3>
+                        </div>
+                    </div>
+    
+                    <div class="offer-cart">
+                        <div class="offer-cart-icon">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <div class="offer-cart-info">
+                            <h2>Technical Analysis</h2>
+                            <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h3>
+                        </div>
+                    </div>
+    
+                    <div class="offer-cart">
+                        <div class="offer-cart-icon">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                        </div>
+                        <div class="offer-cart-info">
+                            <h2>Technical Analysis</h2>
+                            <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class=review-section>
+            <div class="review-title wow animate__bounceInLeft" data-wow-duration="2s" data-wow-delay=".1s">
+                <h2>Costumer Reviews</h2>
+            </div>
+            <div class="review-info wow animate__bounceInRight" data-wow-duration="2s" data-wow-delay=".2s">
+                <div class="review-cart">
+                    <div class="review-cart-img">
+                        <img src="./assets/review/client1.jpg" alt="costumer">
+                    </div>
+                    <div class="review-cart-info">
+                        <h2>Lorem ipsum</h2>
+                        <h3>lorem ispum</h3>
+                        <p>“ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s”.......</p>
+                    </div>
+                </div>
+
+                <div class="review-cart">
+                    <div class="review-cart-img">
+                        <img src="./assets/review/client2.jpg" alt="costumer">
+                    </div>
+                    <div class="review-cart-info">
+                        <h2>Lorem ipsum</h2>
+                        <h3>lorem ispum</h3>
+                        <p>“ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s”.......</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="daily-statistics-section">
+           <div class="overlay">
+                <div class="daily-statistics-info">
+                    <div class="daily-statistics-cart">
+                        <i class="fa-solid fa-heart"></i>
+                        <h3>100</h3>
+                        <p>Love Our Team</p>
+                    </div>
+                    
+                    <div class="daily-statistics-cart">
+                        <i class="fa-solid fa-check"></i>
+                        <h3>400</h3>
+                        <p>Check Our</p>
+                    </div>
+    
+                    <div class="daily-statistics-cart">
+                        <i class="fa-solid fa-arrows-rotate"></i>
+                        <h3>312</h3>
+                        <p>Repeat Client</p>
+                    </div>
+    
+                    <div class="daily-statistics-cart">
+                        <i class="fa-solid fa-beer-mug-empty"></i>
+                        <h3>480</h3>
+                        <p>Pizzas Ordered</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="our-team-section">
+            <div class="our-team-title wow animate__zoomIn" data-wow-duration="1.5s" data-wow-delay="0.2s">
+                <h2>Meet Our Team</h2>
+                <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec odio ipsum. Suspendisse cursus malesuada facilisis.Lorem ipsum dolor sit amet, consectetur facilisis.</h3>
+            </div>
+            <div class="our-team-info wow animate__zoomIn" data-wow-duration="1.7s" data-wow-delay="0.2s">
+                <div class="our-team-cart cart1">
+                    <div class="our-team-overlay">
+                        <h2>Michael John</h2>
+                        <h3>Html-Coder</h3>
+                        <ul>
+                            <li>
+                                <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                            </li>
+                            <li>
+                                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href=""><i class="fa-brands fa-pinterest-p"></i></a>
+                            </li>
+                            <li>
+                                <a href=""><i class="fa-brands fa-dribbble"></i></a>
+                            </li>
+                            <li>
+                                <a href=""><i class="fa-brands fa-behance"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="our-team-cart cart2">
+                    <div class="our-team-overlay">
+                        <h2>Michael John</h2>
+                        <h3>Html-Coder</h3>
+                        <ul>
+                            <li>
+                                <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                            </li>
+                            <li>
+                                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href=""><i class="fa-brands fa-pinterest-p"></i></a>
+                            </li>
+                            <li>
+                                <a href=""><i class="fa-brands fa-dribbble"></i></a>
+                            </li>
+                            <li>
+                                <a href=""><i class="fa-brands fa-behance"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="our-team-cart cart3">
+                    <div class="our-team-overlay">
+                        <h2>Michael John</h2>
+                        <h3>Html-Coder</h3>
+                        <ul>
+                            <li>
+                                <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                            </li>
+                            <li>
+                                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href=""><i class="fa-brands fa-pinterest-p"></i></a>
+                            </li>
+                            <li>
+                                <a href=""><i class="fa-brands fa-dribbble"></i></a>
+                            </li>
+                            <li>
+                                <a href=""><i class="fa-brands fa-behance"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="our-team-cart cart4">
+                    <div class="our-team-overlay">
+                        <h2>Michael John</h2>
+                        <h3>Html-Coder</h3>
+                        <ul>
+                            <li>
+                                <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                            </li>
+                            <li>
+                                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href=""><i class="fa-brands fa-pinterest-p"></i></a>
+                            </li>
+                            <li>
+                                <a href=""><i class="fa-brands fa-dribbble"></i></a>
+                            </li>
+                            <li>
+                                <a href=""><i class="fa-brands fa-behance"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="our-work-section">
+            <div class="our-work-title wow animate__zoomIn" data-wow-duration="1.7s" data-wow-delay="0.2s">
+                <h2>Our Awesome Works</h2>
+                <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec odio ipsum. Suspendisse cursus malesuada facilisis.Lorem ipsum dolor sit amet, consectetur facilisis.</h3>
+            </div>
+            <div class="our-work-info wow animate__zoomIn" data-wow-duration="1.7s" data-wow-delay="0.2s">
+                <div class="our-work-menu">
+                    <ul>
+                        <li><a href="" class="home-li">All</a></li>
+                        <li><a href="">PHOTOGRAPHY</a></li>
+                        <li><a href="">GRAPHIC</a></li>
+                        <li><a href="">PRINT</a></li>
+                        <li><a href="">WEB</a></li>
+                    </ul>
+                </div>
+                <div class="our-work-cards">
+
+                    <div class="our-work-card">
+                        <div class="our-work-card-img">
+                            <img src="./assets/work/pf1.jpg" alt="work-img">
+                            <div class="our-work-card-img-overlay">
+                                <div class="our-work-card-img-search">
+                                    <a href=""><i class="fa-solid fa-magnifying-glass"></i>                                    </a>
+                                </div>
+                                <div class="our-work-card-img-link">
+                                    <a href=""><i class="fa-solid fa-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="our-work-card-info">
+                            <h2>Our work N:1</h2>
+                            <h3>Lorem ipsum dolor sit amet, consectetur</h3>
+                        </div>
+                    </div>
+
+                    <div class="our-work-card">
+                        <div class="our-work-card-img">
+                            <img src="./assets/work/pf2.jpg" alt="work-img">
+                            <div class="our-work-card-img-overlay">
+                                <div class="our-work-card-img-search">
+                                    <a href=""><i class="fa-solid fa-magnifying-glass"></i>                                    </a>
+                                </div>
+                                <div class="our-work-card-img-link">
+                                    <a href=""><i class="fa-solid fa-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="our-work-card-info">
+                            <h2>Our work N:2</h2>
+                            <h3>Lorem ipsum dolor sit amet, consectetur</h3>
+                        </div>
+                    </div>
+
+                    <div class="our-work-card">
+                        <div class="our-work-card-img">
+                            <img src="./assets/work/pf3.jpg" alt="work-img">
+                            <div class="our-work-card-img-overlay">
+                                <div class="our-work-card-img-search">
+                                    <a href=""><i class="fa-solid fa-magnifying-glass"></i>                                    </a>
+                                </div>
+                                <div class="our-work-card-img-link">
+                                    <a href=""><i class="fa-solid fa-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="our-work-card-info">
+                            <h2>Our work N:3</h2>
+                            <h3>Lorem ipsum dolor sit amet, consectetur</h3>
+                        </div>
+                    </div>
+
+                    <div class="our-work-card">
+                        <div class="our-work-card-img">
+                            <img src="./assets/work/pf4.jpg" alt="work-img">
+                            <div class="our-work-card-img-overlay">
+                                <div class="our-work-card-img-search">
+                                    <a href=""><i class="fa-solid fa-magnifying-glass"></i>                                    </a>
+                                </div>
+                                <div class="our-work-card-img-link">
+                                    <a href=""><i class="fa-solid fa-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="our-work-card-info">
+                            <h2>Our work N:4</h2>
+                            <h3>Lorem ipsum dolor sit amet, consectetur</h3>
+                        </div>
+                    </div>
+
+                    <div class="our-work-card">
+                        <div class="our-work-card-img">
+                            <img src="./assets/work/pf5.jpg" alt="work-img">
+                            <div class="our-work-card-img-overlay">
+                                <div class="our-work-card-img-search">
+                                    <a href=""><i class="fa-solid fa-magnifying-glass"></i>                                    </a>
+                                </div>
+                                <div class="our-work-card-img-link">
+                                    <a href=""><i class="fa-solid fa-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="our-work-card-info">
+                            <h2>Our work N:5</h2>
+                            <h3>Lorem ipsum dolor sit amet, consectetur</h3>
+                        </div>
+                    </div>
+
+                    <div class="our-work-card">
+                        <div class="our-work-card-img">
+                            <img src="./assets/work/pf6.jpg" alt="work-img">
+                            <div class="our-work-card-img-overlay">
+                                <div class="our-work-card-img-search">
+                                    <a href=""><i class="fa-solid fa-magnifying-glass"></i>                                    </a>
+                                </div>
+                                <div class="our-work-card-img-link">
+                                    <a href=""><i class="fa-solid fa-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="our-work-card-info">
+                            <h2>Our work N:6</h2>
+                            <h3>Lorem ipsum dolor sit amet, consectetur</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="our-work-section" style="min-height: 0;">
+            <div class="our-work-title wow animate__zoomIn" data-wow-duration="1.7s" data-wow-delay="0.2s" style="margin-bottom: 1rem;">
+                <h2>Our Awesome Works</h2>
+            </div>
+            <div class="our-work-info wow animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
+                <div class="our-work-cards awesome-cards">
+                    <div class="our-work-card awesome">
+                        <div class="our-work-card-img">
+                            <img src="./assets/last-s/works1.png" alt="work-img">
+                        </div>
+                    </div>
+                    <div class="our-work-card awesome">
+                        <div class="our-work-card-img">
+                            <img src="./assets/last-s/works2.png" alt="work-img">
+                        </div>
+                    </div>
+                    <div class="our-work-card awesome">
+                        <div class="our-work-card-img">
+                            <img src="./assets/last-s/works3.png" alt="work-img">
+                        </div>
+                    </div>
+                    <div class="our-work-card awesome">
+                        <div class="our-work-card-img">
+                            <img src="./assets/last-s/works4.png" alt="work-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer id="faq">
+       <div class="footer-overlay">
+        
+        <div class="up-footer">
+            <div class="up-footer-info wow animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
+                <h2>Subscribe to our newsletter to get every Notify</h2>
+            <div class="search-div">
+                <i class="fa-solid fa-paper-plane"></i>            
+            </div>
+            <input type="text" placeholder="Search for...">
+            </div>
+        </div>
+
+        <div class="mid-footer">
+
+            <div class="mid-footer-info wow animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
+                <div class="footer-info">
+                    <div class="footer-img">
+                        <img src="./assets/logo/logo.png" alt="logo">
+                    </div>
+                    <div class="footer-info-div">
+                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal.</p>
+                    </div>
+                    <div class="footer-social-meidas">
+                            <div class="social-media">
+                                <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                            </div>
+                            <div class="social-media">
+                                <a href=""><i class="fa-brands fa-google-plus-g"></i></a>
+                            </div>
+                            <div class="social-media">
+                                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                            </div>
+                            <div class="social-media">
+                                <a href=""><i class="fa-brands fa-vimeo-v"></i></a>
+                            </div>
+                            <div class="social-media">
+                                <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+                            </div>
+                    </div>
+                </div> 
+                
+                <div class="footer-some-features">
+                        <h3>Some features</h3>
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                <p>Lorem ipsum dolor sit amet</p>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                <p>Aliquam tincidunt cons ectetuer</p>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                <p>Vestibulum auctor dapibus con</p>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                <p>Lorem ipsum dolor sit amet auctor dapibus</p>
+                            </li>
+                        </ul>
+                </div>
+    
+                <div class="footer-tags">
+                    <h3>Tags</h3>
+                    <ul>
+                        <li><a href="">corporate</a></li>
+                        <li><a href="">agency</a></li>
+                        <li><a href="">portfolio</a></li>
+                        <li><a href="">blog</a></li>
+                        <li><a href="">elegant</a></li>
+                        <li><a href="">professional</a></li>
+                        <li><a href="">bussines</a></li>
+                    </ul>
+                </div>
+    
+                <div class="footer-flicker-posts">
+                    <h3>Flicker posts</h3>
+    
+                    <div class="footer-img">
+                        <img src="./assets/footer/flipcker1.jpg" alt="flicker-posts">
+                        <img src="./assets/footer/flipcker2.jpg" alt="flicker-posts">
+                        <img src="./assets/footer/flipcker3.jpg" alt="flicker-posts">
+                        <img src="./assets/footer/flipcker4.jpg" alt="flicker-posts">
+                        <img src="./assets/footer/flipcker3.jpg" alt="flicker-posts">
+                        <img src="./assets/footer/flipcker2.jpg" alt="flicker-posts">
+                        <img src="./assets/footer/flipcker4.jpg" alt="flicker-posts">
+                        <img src="./assets/footer/flipcker1.jpg" alt="flicker-posts">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="down-footer">
+            <div class="down-footer-info wow animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
+                <div class="left-footer">
+                    <h2>Made with <i class="fa-solid fa-heart"></i> by <span>BootstarpThemes.</span> All Rights Reserved</h2>
+                </div>
+                <div class="right-footer">
+                    <ul>
+                        <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-google-plus-g"></i></a></li>
+                        <li><a href=""><i class="fa-solid fa-rss"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-vimeo-v"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-pinterest"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-linkedin-in"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+       </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script> new WOW().init()</script>
 </body>
 </html>

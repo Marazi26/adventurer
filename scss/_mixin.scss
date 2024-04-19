@@ -1,0 +1,175 @@
+
+@mixin menu{
+    
+    ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    ul li a {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        font-weight: 400;
+        color: #74777b;
+    }
+
+    ul li a:hover {
+        color: #ec4848;
+    }
+
+    ul li a:focus {
+        color: #ec4848;
+    }
+
+    ul li a:active {
+        color: #ec4848;
+    }
+
+    .home-li {
+        color: #ec4848;
+    }
+}
+@mixin red-button {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    color: #ffffff;
+    background-color: #ec4848;
+    font-size: 1.3rem;
+    padding: .4rem 1rem .5rem 1rem;
+}
+@mixin red-button-mini{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    color: #ffffff;
+    background-color: #ec4848;
+    font-size: 1rem;
+    padding: .3rem .8rem .4rem .8rem;
+}
+/***TITLES*****************/
+
+@mixin title-with-info {
+    h2{
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 2.222rem;
+        line-height: 2.5rem;
+        font-weight: 700;
+        color: #373a3c;
+        text-transform: uppercase;
+        text-align: center;
+        padding-bottom: 3rem;
+        padding-top: 2rem;
+    }
+
+    h3{
+        width: 75%;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 1.2rem;
+        font-family: "Roboto";
+        font-weight: 300;
+        // padding: 0 4rem;
+        padding-bottom: 2rem;
+    }
+}
+@mixin title-h2-tablet{
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 1.82rem;
+        line-height: 2.5rem;
+        font-weight: 700;
+        color: #373a3c;
+        text-transform: uppercase;
+        text-align: center;
+        padding-bottom: 1rem;
+}
+@mixin title-h3-tablet{
+    width: 70%;
+    font-size: 1.125rem;
+    margin: 0 auto;
+    text-align: center;
+    font-family: "Roboto";
+    font-weight: 300;
+    padding-bottom: 2rem;
+}
+@mixin title-h2-mobile{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+    font-weight: 700;
+    color: #373a3c;
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+@mixin title-h3-mobile{
+    width: 85%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1rem;
+    font-family: "Roboto";
+    font-weight: 300;
+    padding-bottom: 1rem;
+}
+/*** FLEX-BOXES*****************/
+@mixin flex-box{
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+@mixin flex-box-mobile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+/***SECTION SIZINGS *****************/
+@mixin section-sizing{
+    border-top: 1px solid rgba(0, 0, 0, .1);
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    margin-bottom: 6rem;
+}
+@mixin section-sizing-tablet{
+    border-top: 1px solid rgba(0, 0, 0, .1);
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    margin-bottom: 4rem;
+}
+/***SECTION INSIDE SIZINGS *****************/
+@mixin section-inside-sizing{
+    width: 73%;
+}
+@mixin section-inside-sizing-tablet{
+    width: 87%;
+}
+@mixin section-inside-sizing-mobile{
+    width: 92%;
+}
+
+@mixin little-title-h3 {
+    padding: 1.5rem 0;  
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;  
+}
+@mixin text-p {
+    padding: 1rem 0; 
+    padding-top: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 300;
+    font-size: 1.2rem;    
+}
