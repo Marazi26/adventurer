@@ -201,7 +201,7 @@ header {
 /*** ABOUT ******************************************************************************************************/
 .about-section {
     @include section-sizing;
-
+    overflow: hidden;
     .about-title {
         @include title-with-info;
         // padding-bottom: 3rem;
@@ -481,7 +481,7 @@ header {
 /*** SERVICE ******************************************************************************************************/
 .service-section {
     @include section-sizing;
-
+    overflow: hidden;
     .service-title {
         @include title-with-info;
     }
@@ -743,7 +743,7 @@ header {
 /*** OFFER ******************************************************************************************************/
 
 .offer-section {
-    
+    overflow-y: hidden;
     .offer-title {
         @include section-inside-sizing;
         @include title-with-info;
@@ -908,7 +908,7 @@ header {
 
 .review-section {
     @include section-sizing;
-
+    overflow-x: hidden;
     .review-title {
         @include section-inside-sizing;
         @include title-with-info;
@@ -1397,6 +1397,7 @@ header {
 
 .our-work-section {
     @include section-sizing;
+    overflow-y: hidden;
 
     .our-work-title {
         @include title-with-info;
@@ -1587,7 +1588,8 @@ header {
 
 footer {
     // margin-top: 3rem;
-
+    overflow-y: hidden;
+   
     .up-footer {
         margin-bottom: 0;
         @include flex-box;
